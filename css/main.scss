@@ -1,0 +1,305 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+
+
+
+$font-stack: Open Sans, sans-serif;
+$primary-color: #334;
+$block-heading-size: 21px;
+$center-width: 60%;
+$grey: #C0C0C0;
+$black: #191919;
+$grey-background: rgb(235,235, 235);
+$grey-light: rgb(136, 136, 136);
+$placester-red: rgb(245, 50, 50);
+
+
+
+
+body{
+    width: 100%;
+    font: 66% $font-stack;
+    color: $primary-color;
+    margin: 0;
+    padding: 0;
+
+
+    a{
+        text-decoration: none;
+    }
+
+
+    #headers{
+        margin-left: auto;
+        margin-right: auto;
+        width: $center-width;
+        margin-bottom: 50px;
+        height: 57px;
+
+        ul{
+            text-align: right;
+            li{
+                display: inline;
+                position: relative;
+            }
+        }
+
+        a{
+            color: $grey;
+        }
+
+        #home-button{
+            float: left;
+            padding-top: 15px;
+        }
+
+        #accounts{
+            border: 2px;
+            border-radius: 3px;
+            background-color: $grey-background;
+            margin-top: 0;
+            ul{
+                float: right;
+                
+                li{
+                    float: right;
+                    padding-right: 5px;
+                    padding-left: 5px;
+                }
+            }
+        }
+
+        #social{
+            height: 24;
+            color: $placester-red;
+            li{
+                padding-left: 7px;
+            }
+        }
+        #phone-number{
+            font-size: 150%;
+            padding-right: 25px; 
+        }
+
+        #navigation{
+            margin-right: 70px;
+            li{
+                padding-right: 4px;
+                padding-left: 4px;
+            }
+        }
+    }
+
+
+
+
+
+    #slideshow{
+        background-color: $black;
+        width: 100%;
+        height: 300px;
+    }
+
+    #search-background {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $grey-background;
+        #search{
+            padding-top: 5px;
+            padding-bottom: 25px;
+            width: $center-width;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            text-align: center;
+            background-color: $grey-background;
+
+            p{
+                color: $black;
+                font-size: 20px;
+                font-weight: lighter;
+            }
+            #search-button{
+                color: white;
+                background-color: $placester-red;
+                font-size: 150%;
+                padding: 5px;
+                border-radius: 4px;
+            }
+            #forms{
+                padding-bottom: 20px;
+                font-weight: 150%;
+                font-size: 150%;
+                input {
+                    height: 21px;
+                    width: 30%;
+                    border-radius: 5px;
+                    border-style: solid;
+                    border-color: $grey-light;    
+                    border-width: 1px;
+                }
+            }
+        
+        }
+    }
+
+
+    #featured-neighborhoods{
+        color: $black;
+        width: $center-width;
+        margin-left: auto;
+        margin-right: auto;
+        #neighborhood-title{
+            color: $grey-light;
+            font-size: 200%;
+            font-weight: 50%;
+        }
+        ul {
+            display: inline;
+            li{
+                width: 24%;
+                float: left;
+
+                .neighborhood{
+                    float: left;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+
+    #properties{
+        width: $center-width;
+        margin-left: auto;
+        margin-right: auto;
+        clear: both;
+    }
+
+
+    #cities{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        background-color: $grey-background;
+        overflow: hidden;
+        h2{
+            font-size: 200%;
+            clear: both;
+        }
+
+        hr {
+            clear: both;
+            border-top: 3px dotted;
+            color: $grey-light;
+            height: 1px;
+        }
+
+        ul{
+            background-color: $grey-background;
+            width: $center-width;
+            margin-left: auto;
+            margin-right: auto;
+            .city{
+                width: 16%;
+                float: left;
+                margin-bottom: 15px;
+                li{
+                    display: inline;
+                    width: 16%;
+                    a{
+                        color: $black;
+                    }
+                    a:hover{
+                        color: red;
+                        text-decoration-color: none;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    #navigation-bottom{
+        clear: both;
+        background-color: $black;
+        height: 30px;
+        text-decoration: none;
+        margin-bottom: 1px;
+
+        a{
+            color: grey;
+        }
+        nav{
+            text-align: center;
+            vertical-align: middle; 
+        }
+    }
+
+
+    #social-bottom{
+        float: left;
+        width: 100%;
+        color: $grey;
+        background-color: $black;
+        text-align: center;
+        li{
+            display: inline;
+        }
+        .social-big{
+            text-decoration: none;
+            display: inline;
+            a{
+                color: $grey;
+            }
+        }
+        #contact{
+            li{
+                display: inline;
+                color: white;
+                a{
+                    color: $placester-red;
+                }
+            }
+        }
+    }
+            
+
+    #copyright{
+        color: $grey;
+        background-color: $black;
+        text-align: center;
+        margin-top: 3px;
+    }
+}
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
