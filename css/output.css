@@ -19,7 +19,7 @@ body {
         display: inline;
         position: relative; }
     body #headers a {
-      color: silver; }
+      color: #f0f0f0; }
     body #headers #home-button {
       float: left;
       padding-top: 15px; }
@@ -32,8 +32,8 @@ body {
         float: right; }
         body #headers #accounts ul li {
           float: right;
-          padding-right: 5px;
-          padding-left: 5px; }
+          margin-right: 5px;
+          margin-left: 5px; }
     body #headers #social {
       height: 24;
       color: #f53232; }
@@ -153,9 +153,10 @@ body {
       text-align: center;
       vertical-align: middle; }
   body #social-bottom {
+    margin: 0;
     float: left;
     width: 100%;
-    color: silver;
+    color: #f0f0f0;
     background-color: #191919;
     text-align: center; }
     body #social-bottom li {
@@ -164,14 +165,17 @@ body {
       text-decoration: none;
       display: inline; }
       body #social-bottom .social-big a {
-        color: silver; }
-    body #social-bottom #contact li {
+        color: #f0f0f0; }
+    body #social-bottom #contact {
       display: inline;
-      color: white; }
-      body #social-bottom #contact li a {
+      font-size: 220%; }
+      body #social-bottom #contact li {
+        margin-right: 30px; }
+      body #social-bottom #contact a {
+        font-size: 80%;
         color: #f53232; }
   body #copyright {
-    color: silver;
+    color: #f0f0f0;
     background-color: #191919;
     text-align: center;
     margin-top: 3px; }
