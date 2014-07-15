@@ -70,7 +70,7 @@ body {
       font: Oswald, sans-serif;
       padding-top: 5px;
       padding-bottom: 25px;
-      width: 60%;
+      width: 65%;
       margin-left: auto;
       margin-right: auto;
       margin-top: 0px;
@@ -107,24 +107,18 @@ body {
       display: table;
       clear: both; }
     body #featured-neighborhoods #neighborhood-title {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
       width: 100%;
       color: #909090;
       font-size: 200%;
       font-weight: 50%; }
-      body #featured-neighborhoods #neighborhood-title:last-child {
-        margin-right: 0; }
-    body #featured-neighborhoods li {
-      display: inline;
+    body #featured-neighborhoods .neighborhood {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 23.23176%; }
-      body #featured-neighborhoods li:last-child {
+      body #featured-neighborhoods .neighborhood:last-child {
         margin-right: 0; }
-      body #featured-neighborhoods li img {
+      body #featured-neighborhoods .neighborhood img {
         width: 100%; }
   body #properties {
     text-align: center;
@@ -139,62 +133,84 @@ body {
         content: "";
         display: table;
         clear: both; }
-      body #properties #posts li {
-        display: inline-block;
+      body #properties #posts .post {
         background-color: white;
         margin-bottom: 10px;
-        height: 327px;
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 31.76157%; }
-        body #properties #posts li:last-child {
+        body #properties #posts .post:last-child {
           margin-right: 0; }
-        body #properties #posts li:nth-child(3n) {
+        body #properties #posts .post:nth-child(3n) {
           margin-right: 0; }
-        body #properties #posts li:nth-child(3n+1) {
+        body #properties #posts .post:nth-child(3n+1) {
           clear: left; }
-        body #properties #posts li img {
+        body #properties #posts .post img {
           width: 100%; }
-  body #cities {
+  body #social-feeds {
+    max-width: 65%;
+    margin-left: auto;
+    margin-right: auto; }
+    body #social-feeds:after {
+      content: "";
+      display: table;
+      clear: both; }
+    body #social-feeds #instagram, body #social-feeds #pinterest {
+      text-align: left;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      body #social-feeds #instagram:last-child, body #social-feeds #pinterest:last-child {
+        margin-right: 0; }
+      body #social-feeds #instagram .picture, body #social-feeds #pinterest .picture {
+        float: left;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        margin-right: 0; }
+        body #social-feeds #instagram .picture:last-child, body #social-feeds #pinterest .picture:last-child {
+          margin-right: 0; }
+        body #social-feeds #instagram .picture img, body #social-feeds #pinterest .picture img {
+          width: 100%; }
+  body #cities-background {
     font: Oswald, sans-serif;
     text-align: center;
     background-color: #ededed;
     overflow: hidden;
     clear: both; }
-    body #cities h2 {
+    body #cities-background h2 {
       font-size: 200%;
       clear: both; }
-    body #cities hr {
+    body #cities-background hr {
       clear: both;
       border-top: 3px dotted;
       color: #909090;
       height: 1px; }
-    body #cities ul {
+    body #cities-background .cities {
       max-width: 65%;
       margin-left: auto;
       margin-right: auto;
       background-color: #ededed; }
-      body #cities ul:after {
+      body #cities-background .cities:after {
         content: "";
         display: table;
         clear: both; }
-      body #cities ul .city {
-        margin-bottom: 15px; }
-        body #cities ul .city li {
-          background-color: white;
-          display: inline-block;
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 14.70196%; }
-          body #cities ul .city li:last-child {
-            margin-right: 0; }
-          body #cities ul .city li a {
-            color: #171717; }
-          body #cities ul .city li a:hover {
-            color: red;
-            text-decoration-color: none; }
+      body #cities-background .cities .city {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 14.70196%;
+        margin-bottom: 20px; }
+        body #cities-background .cities .city:last-child {
+          margin-right: 0; }
+        body #cities-background .cities .city a {
+          color: #171717; }
+        body #cities-background .cities .city a:hover {
+          color: red;
+          text-decoration-color: none; }
   body #navigation-bottom {
     clear: both;
     background-color: #171717;

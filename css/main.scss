@@ -10,7 +10,7 @@ $font-stack: Open Sans, sans-serif;
 $oswald: Oswald, sans-serif;
 $primary-color: #334;
 $block-heading-size: 21px;
-$center-width: 60%;
+$center-width: 65%;
 $black: rgb(23, 23, 23);
 $grey-background: rgb(237,237, 237);
 $grey-light: rgb(144, 144, 144);
@@ -152,13 +152,12 @@ body{
         @include outer-container;
         color: $black;
         #neighborhood-title{
-            @include span-columns(12);
+            width: 100%;
             color: $grey-light;
             font-size: 200%;
             font-weight: 50%;
         }
-        li{
-            display: inline;
+        .neighborhood{
             @include span-columns(3);
             img{
                 width:100%;
@@ -174,11 +173,9 @@ body{
         #posts{
             text-align: left;
             @include outer-container;
-            li{
-                display: inline-block;
+            .post{
                 background-color: white;
                 margin-bottom: 10px;
-                height: 327px;
                 @include span-columns(4);
                 @include omega(3n);
                 img{
@@ -189,7 +186,26 @@ body{
     }
 
 
-    #cities{
+
+    #social-feeds {
+        @include outer-container;
+        #instagram, #pinterest {
+            text-align: left;
+            @include span-columns(4);
+            .picture{
+                float: left;
+                @include span-columns(4);
+                @include omega();
+                img{
+                    width: 100%
+                }
+            }
+        }
+    }
+
+
+
+    #cities-background{
         font: $oswald;
         text-align: center;
         background-color: $grey-background;
@@ -207,25 +223,20 @@ body{
             height: 1px;
         }
 
-        ul{
+        .cities{
             @include outer-container;
             background-color: $grey-background;
             .city{
-                margin-bottom: 15px;
-                li{
-                    background-color: white;
-                    display: inline-block;
-                    @include span-columns(2);
-                    a{
-                        color: $black;
-                    }
-                    a:hover{
-                        color: red;
-                        text-decoration-color: none;
-                    }
+                @include span-columns(2);
+                margin-bottom: 20px;
+                a{
+                    color: $black;
                 }
-            }
-            
+                a:hover{
+                    color: red;
+                    text-decoration-color: none;
+                }
+            }  
         }
     }
 
