@@ -1,4 +1,10 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans");
+@import url("http://fonts.googleapis.com/css?family=Oswald");
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
   width: 100%;
   font: 66% Open Sans, sans-serif;
@@ -8,25 +14,29 @@ body {
   body a {
     text-decoration: none; }
   body #headers {
+    max-width: 65%;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
     margin-bottom: 50px;
     height: 57px; }
+    body #headers:after {
+      content: "";
+      display: table;
+      clear: both; }
     body #headers ul {
       text-align: right; }
       body #headers ul li {
         display: inline;
         position: relative; }
     body #headers a {
-      color: #f0f0f0; }
+      color: #909090; }
     body #headers #home-button {
       float: left;
       padding-top: 15px; }
     body #headers #accounts {
       border: 2px;
       border-radius: 3px;
-      background-color: #ebebeb;
+      background-color: #ededed;
       margin-top: 0; }
       body #headers #accounts ul {
         float: right; }
@@ -36,7 +46,7 @@ body {
           margin-left: 5px; }
     body #headers #social {
       height: 24;
-      color: #f53232; }
+      color: #e75640; }
       body #headers #social li {
         padding-left: 7px; }
     body #headers #phone-number {
@@ -48,15 +58,16 @@ body {
         padding-right: 4px;
         padding-left: 4px; }
   body #slideshow {
-    background-color: #191919;
+    background-color: #171717;
     width: 100%;
     height: 300px; }
   body #search-background {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #ebebeb; }
+    background-color: #ededed; }
     body #search-background #search {
+      font: Oswald, sans-serif;
       padding-top: 5px;
       padding-bottom: 25px;
       width: 60%;
@@ -64,14 +75,14 @@ body {
       margin-right: auto;
       margin-top: 0px;
       text-align: center;
-      background-color: #ebebeb; }
+      background-color: #ededed; }
       body #search-background #search p {
-        color: #191919;
+        color: #171717;
         font-size: 20px;
         font-weight: lighter; }
       body #search-background #search #search-button {
         color: white;
-        background-color: #f53232;
+        background-color: #e75640;
         font-size: 150%;
         padding: 5px;
         border-radius: 4px; }
@@ -84,66 +95,109 @@ body {
           width: 30%;
           border-radius: 5px;
           border-style: solid;
-          border-color: #888888;
+          border-color: #909090;
           border-width: 1px; }
   body #featured-neighborhoods {
-    color: #191919;
-    width: 60%;
+    max-width: 65%;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    color: #171717; }
+    body #featured-neighborhoods:after {
+      content: "";
+      display: table;
+      clear: both; }
     body #featured-neighborhoods #neighborhood-title {
-      color: #888888;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      color: #909090;
       font-size: 200%;
       font-weight: 50%; }
-    body #featured-neighborhoods ul {
-      display: inline; }
-      body #featured-neighborhoods ul li {
-        width: 24%;
-        float: left; }
-        body #featured-neighborhoods ul li .neighborhood {
-          float: left;
-          margin-left: 0;
-          margin-right: 0; }
+      body #featured-neighborhoods #neighborhood-title:last-child {
+        margin-right: 0; }
+    body #featured-neighborhoods li {
+      display: inline;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      body #featured-neighborhoods li:last-child {
+        margin-right: 0; }
+      body #featured-neighborhoods li img {
+        width: 100%; }
   body #properties {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both; }
-  body #cities {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
-    background-color: #ebebeb;
-    overflow: hidden; }
+    clear: both;
+    background-color: #ededed; }
+    body #properties #posts {
+      text-align: left;
+      max-width: 65%;
+      margin-left: auto;
+      margin-right: auto; }
+      body #properties #posts:after {
+        content: "";
+        display: table;
+        clear: both; }
+      body #properties #posts li {
+        display: inline-block;
+        background-color: white;
+        margin-bottom: 10px;
+        height: 327px;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        body #properties #posts li:last-child {
+          margin-right: 0; }
+        body #properties #posts li:nth-child(3n) {
+          margin-right: 0; }
+        body #properties #posts li:nth-child(3n+1) {
+          clear: left; }
+        body #properties #posts li img {
+          width: 100%; }
+  body #cities {
+    font: Oswald, sans-serif;
+    text-align: center;
+    background-color: #ededed;
+    overflow: hidden;
+    clear: both; }
     body #cities h2 {
       font-size: 200%;
       clear: both; }
     body #cities hr {
       clear: both;
       border-top: 3px dotted;
-      color: #888888;
+      color: #909090;
       height: 1px; }
     body #cities ul {
-      background-color: #ebebeb;
-      width: 60%;
+      max-width: 65%;
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      background-color: #ededed; }
+      body #cities ul:after {
+        content: "";
+        display: table;
+        clear: both; }
       body #cities ul .city {
-        width: 16%;
-        float: left;
         margin-bottom: 15px; }
         body #cities ul .city li {
-          display: inline;
-          width: 16%; }
+          background-color: white;
+          display: inline-block;
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 14.70196%; }
+          body #cities ul .city li:last-child {
+            margin-right: 0; }
           body #cities ul .city li a {
-            color: #191919; }
+            color: #171717; }
           body #cities ul .city li a:hover {
             color: red;
             text-decoration-color: none; }
   body #navigation-bottom {
     clear: both;
-    background-color: #191919;
+    background-color: #171717;
     height: 30px;
     text-decoration: none;
     margin-bottom: 1px; }
@@ -156,8 +210,8 @@ body {
     margin: 0;
     float: left;
     width: 100%;
-    color: #f0f0f0;
-    background-color: #191919;
+    color: #909090;
+    background-color: #171717;
     text-align: center; }
     body #social-bottom li {
       display: inline; }
@@ -165,7 +219,7 @@ body {
       text-decoration: none;
       display: inline; }
       body #social-bottom .social-big a {
-        color: #f0f0f0; }
+        color: #909090; }
     body #social-bottom #contact {
       display: inline;
       font-size: 220%; }
@@ -173,9 +227,9 @@ body {
         margin-right: 30px; }
       body #social-bottom #contact a {
         font-size: 80%;
-        color: #f53232; }
+        color: #e75640; }
   body #copyright {
-    color: #f0f0f0;
-    background-color: #191919;
+    color: #909090;
+    background-color: #171717;
     text-align: center;
     margin-top: 3px; }

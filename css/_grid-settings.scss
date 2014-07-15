@@ -1,0 +1,5 @@
+@import "neat/neat-helpers"; // or "neat-helpers" when in Rails
+
+// Change the grid settings
+$max-width: 65%;
+$grid-columns: 12;

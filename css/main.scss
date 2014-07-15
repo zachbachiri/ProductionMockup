@@ -1,16 +1,20 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans');
+@import url('http://fonts.googleapis.com/css?family=Oswald');
+@import "css/bourbon/bourbon"; // or "bourbon" when in Rails
+@import "grid-settings";
+@import "css/neat/neat";
 
 
 
 $font-stack: Open Sans, sans-serif;
+$oswald: Oswald, sans-serif;
 $primary-color: #334;
 $block-heading-size: 21px;
 $center-width: 60%;
-$grey: rgb(240, 240, 240);
-$black: #191919;
-$grey-background: rgb(235,235, 235);
-$grey-light: rgb(136, 136, 136);
-$placester-red: rgb(245, 50, 50);
+$black: rgb(23, 23, 23);
+$grey-background: rgb(237,237, 237);
+$grey-light: rgb(144, 144, 144);
+$placester-red: rgb(231, 86, 64);
 
 
 
@@ -26,12 +30,10 @@ body{
     a{
         text-decoration: none;
     }
-
+ 
 
     #headers{
-        margin-left: auto;
-        margin-right: auto;
-        width: $center-width;
+        @include outer-container;
         margin-bottom: 50px;
         height: 57px;
 
@@ -44,7 +46,7 @@ body{
         }
 
         a{
-            color: $grey;
+            color: $grey-light;
         }
 
         #home-button{
@@ -106,6 +108,7 @@ body{
         margin-right: auto;
         background-color: $grey-background;
         #search{
+            font: $oswald;
             padding-top: 5px;
             padding-bottom: 25px;
             width: $center-width;
@@ -146,46 +149,52 @@ body{
 
 
     #featured-neighborhoods{
+        @include outer-container;
         color: $black;
-        width: $center-width;
-        margin-left: auto;
-        margin-right: auto;
         #neighborhood-title{
+            @include span-columns(12);
             color: $grey-light;
             font-size: 200%;
             font-weight: 50%;
         }
-        ul {
+        li{
             display: inline;
-            li{
-                width: 24%;
-                float: left;
-
-                .neighborhood{
-                    float: left;
-                    margin-left: 0;
-                    margin-right: 0;
-                }
+            @include span-columns(3);
+            img{
+                width:100%;
             }
         }
     }
 
 
     #properties{
-        width: $center-width;
-        margin-left: auto;
-        margin-right: auto;
+        text-align: center;
         clear: both;
+        background-color: $grey-background;
+        #posts{
+            text-align: left;
+            @include outer-container;
+            li{
+                display: inline-block;
+                background-color: white;
+                margin-bottom: 10px;
+                height: 327px;
+                @include span-columns(4);
+                @include omega(3n);
+                img{
+                    width:100%;
+                }
+            }
+        }
     }
 
 
     #cities{
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        font: $oswald;
         text-align: center;
         background-color: $grey-background;
         overflow: hidden;
+        clear: both;
         h2{
             font-size: 200%;
             clear: both;
@@ -199,17 +208,14 @@ body{
         }
 
         ul{
+            @include outer-container;
             background-color: $grey-background;
-            width: $center-width;
-            margin-left: auto;
-            margin-right: auto;
             .city{
-                width: 16%;
-                float: left;
                 margin-bottom: 15px;
                 li{
-                    display: inline;
-                    width: 16%;
+                    background-color: white;
+                    display: inline-block;
+                    @include span-columns(2);
                     a{
                         color: $black;
                     }
@@ -244,7 +250,7 @@ body{
         margin: 0;
         float: left;
         width: 100%;
-        color: $grey;
+        color: $grey-light;
         background-color: $black;
         text-align: center;
         li{
@@ -254,7 +260,7 @@ body{
             text-decoration: none;
             display: inline;
             a{
-                color: $grey;
+                color: $grey-light;
             }
         }
         #contact{
@@ -272,7 +278,7 @@ body{
             
 
     #copyright{
-        color: $grey;
+        color: $grey-light;
         background-color: $black;
         text-align: center;
         margin-top: 3px;
