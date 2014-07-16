@@ -14,7 +14,7 @@ body {
   body a {
     text-decoration: none; }
   body #headers {
-    max-width: 65%;
+    max-width: 940px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
@@ -63,23 +63,24 @@ body {
     height: 300px; }
   body #search-background {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     background-color: #ededed; }
     body #search-background #search {
       font: Oswald, sans-serif;
-      padding-top: 5px;
-      padding-bottom: 25px;
-      width: 65%;
+      max-width: 940px;
       margin-left: auto;
       margin-right: auto;
+      padding-top: 5px;
+      padding-bottom: 25px;
       margin-top: 0px;
       text-align: center;
-      background-color: #ededed; }
-      body #search-background #search p {
-        color: #171717;
-        font-size: 20px;
-        font-weight: lighter; }
+      color: #171717; }
+      body #search-background #search:after {
+        content: "";
+        display: table;
+        clear: both; }
+      body #search-background #search .chosen-single {
+        height: 39px;
+        font-size: 130%; }
       body #search-background #search #search-button {
         color: white;
         background-color: #e75640;
@@ -91,14 +92,14 @@ body {
         font-weight: 150%;
         font-size: 150%; }
         body #search-background #search #forms input {
-          height: 21px;
+          height: 39px;
           width: 30%;
-          border-radius: 5px;
+          border-radius: 3px;
           border-style: solid;
-          border-color: #909090;
+          border-color: #ededed;
           border-width: 1px; }
   body #featured-neighborhoods {
-    max-width: 65%;
+    max-width: 940px;
     margin-left: auto;
     margin-right: auto;
     color: #171717; }
@@ -115,7 +116,13 @@ body {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 23.23176%; }
+      width: 23.23176%;
+      /*
+      @include media($mobile){
+          @include span-columns(4);
+          @include omega(2n);
+      }
+      */ }
       body #featured-neighborhoods .neighborhood:last-child {
         margin-right: 0; }
       body #featured-neighborhoods .neighborhood img {
@@ -126,30 +133,68 @@ body {
     background-color: #ededed; }
     body #properties #posts {
       text-align: left;
-      max-width: 65%;
+      max-width: 940px;
       margin-left: auto;
       margin-right: auto; }
       body #properties #posts:after {
         content: "";
         display: table;
         clear: both; }
-      body #properties #posts .post {
-        background-color: white;
+      body #properties #posts .post-wrapper {
+        position: relative;
+        padding-bottom: 35%;
+        height: 0;
         margin-bottom: 10px;
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 31.76157%; }
-        body #properties #posts .post:last-child {
+        body #properties #posts .post-wrapper:last-child {
           margin-right: 0; }
-        body #properties #posts .post:nth-child(3n) {
+        body #properties #posts .post-wrapper:nth-child(3n) {
           margin-right: 0; }
-        body #properties #posts .post:nth-child(3n+1) {
+        body #properties #posts .post-wrapper:nth-child(3n+1) {
           clear: left; }
-        body #properties #posts .post img {
-          width: 100%; }
+        body #properties #posts .post-wrapper .post {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: white;
+          /*
+          @include media($mobile) {
+              @include span-columns(4);
+              @include omega(2n);
+          }
+          */ }
+          body #properties #posts .post-wrapper .post img {
+            width: 100%; }
+  body #testimonial-video {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto; }
+    body #testimonial-video:after {
+      content: "";
+      display: table;
+      clear: both; }
+    body #testimonial-video #video {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      body #testimonial-video #video:last-child {
+        margin-right: 0; }
+      body #testimonial-video #video iframe {
+        width: 100%; }
+    body #testimonial-video hr {
+      clear: both;
+      border: none;
+      color: #ededed;
+      background-color: #ededed;
+      height: 1px; }
   body #social-feeds {
-    max-width: 65%;
+    max-width: 940px;
     margin-left: auto;
     margin-right: auto; }
     body #social-feeds:after {
@@ -175,6 +220,12 @@ body {
           margin-right: 0; }
         body #social-feeds #instagram .picture img, body #social-feeds #pinterest .picture img {
           width: 100%; }
+      body #social-feeds #instagram a, body #social-feeds #pinterest a {
+        text-decoration: none;
+        text-align: left;
+        color: #e75640; }
+      body #social-feeds #instagram a:visited, body #social-feeds #pinterest a:visited {
+        color: #e75640; }
   body #cities-background {
     font: Oswald, sans-serif;
     text-align: center;
@@ -186,11 +237,10 @@ body {
       clear: both; }
     body #cities-background hr {
       clear: both;
-      border-top: 3px dotted;
-      color: #909090;
-      height: 1px; }
+      border-top: 2px dotted;
+      color: #909090; }
     body #cities-background .cities {
-      max-width: 65%;
+      max-width: 940px;
       margin-left: auto;
       margin-right: auto;
       background-color: #ededed; }
@@ -203,6 +253,7 @@ body {
         display: block;
         margin-right: 2.35765%;
         width: 14.70196%;
+        margin-right: 0;
         margin-bottom: 20px; }
         body #cities-background .cities .city:last-child {
           margin-right: 0; }
