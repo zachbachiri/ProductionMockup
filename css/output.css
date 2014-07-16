@@ -7,7 +7,7 @@
 
 body {
   width: 100%;
-  font: 66% Open Sans, sans-serif;
+  font: 8pt Open Sans, sans-serif;
   color: #333344;
   margin: 0;
   padding: 0; }
@@ -50,17 +50,18 @@ body {
       body #headers #social li {
         padding-left: 7px; }
     body #headers #phone-number {
-      font-size: 150%;
       padding-right: 25px; }
     body #headers #navigation {
       margin-right: 70px; }
       body #headers #navigation li {
         padding-right: 4px;
         padding-left: 4px; }
-  body #slideshow {
-    background-color: #171717;
+  body #slideshow-wrapper #featured {
+    margin: 0 auto;
     width: 100%;
-    height: 300px; }
+    height: 450px;
+    background: white url("orbit/loading.gif") no-repeat center center;
+    overflow: hidden; }
   body #search-background {
     width: 100%;
     background-color: #ededed; }
@@ -79,18 +80,15 @@ body {
         display: table;
         clear: both; }
       body #search-background #search .chosen-single {
-        height: 39px;
-        font-size: 130%; }
+        height: 39px; }
       body #search-background #search #search-button {
         color: white;
         background-color: #e75640;
-        font-size: 150%;
         padding: 5px;
         border-radius: 4px; }
       body #search-background #search #forms {
         padding-bottom: 20px;
-        font-weight: 150%;
-        font-size: 150%; }
+        font-weight: 150%; }
         body #search-background #search #forms input {
           height: 39px;
           width: 30%;
@@ -110,7 +108,6 @@ body {
     body #featured-neighborhoods #neighborhood-title {
       width: 100%;
       color: #909090;
-      font-size: 200%;
       font-weight: 50%; }
     body #featured-neighborhoods .neighborhood {
       float: left;
@@ -233,7 +230,6 @@ body {
     overflow: hidden;
     clear: both; }
     body #cities-background h2 {
-      font-size: 200%;
       clear: both; }
     body #cities-background hr {
       clear: both;
@@ -288,12 +284,10 @@ body {
       body #social-bottom .social-big a {
         color: #909090; }
     body #social-bottom #contact {
-      display: inline;
-      font-size: 220%; }
+      display: inline; }
       body #social-bottom #contact li {
         margin-right: 30px; }
       body #social-bottom #contact a {
-        font-size: 80%;
         color: #e75640; }
   body #copyright {
     color: #909090;

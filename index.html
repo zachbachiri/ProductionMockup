@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
  <head>
- 	<link rel="stylesheet" type="text/css" href="css/output.css"/>
- 	<link rel="stylesheet" type="text/css" href="chosen/chosen.css"/>
+ 	
+ 	<link rel="stylesheet" type="text/css" href="plugins/chosen/chosen.css"/>
+ 	<link rel="stylesheet" href="plugins/Orbit-1.2.3/orbit-1.2.3.css">
+ 	<!--<link rel="stylesheet" href="plugins/foundation-5.3.0/css/normalize.css">
+  	<link rel="stylesheet" href="plugins/foundation-5.3.0/css/foundation.css">-->
+  	<link rel="stylesheet" type="text/css" href="css/output.css"/>
 	
 
  	<title>Zach - Production Test</title>
@@ -11,8 +15,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	
-	
 
  </head>
 
@@ -47,10 +49,40 @@
  	</div>
 
 
+<!--
+	<ul class="example-orbit" data-orbit>
+	  <li>
+	    <img src="images/slideshow1.png" alt="slide 1" />
+	    <div class="orbit-caption">
+	      Caption One.
+	    </div>
+	  </li>
+	  <li class="active">
+	    <img src="images/slideshow2.png" alt="slide 2" />
+	    <div class="orbit-caption">
+	      Caption Two.
+	    </div>
+	  </li>
+	  <li>
+	    <img src="images/slideshow3.png" alt="slide 3" />
+	    <div class="orbit-caption">
+	      Caption Three.
+	    </div>
+	  </li>
+	</ul>
+-->
 
- 	<div id="slideshow">
- 		<!--Slideshow   DO THIS-->
- 	</div>
+ 	<div id="slideshow-wrapper">
+ 	 	<div id="featured"> 
+		    <img src="images/slideshow1.png" style="width:100%" data-caption="#htmlCaption1"/>
+		    <img src="images/slideshow2.png" style="width:100%" data-caption="#htmlCaption2"/>
+		    <img src="images/slideshow3.png" style="width:100%" data-caption="#htmlCaption3"/>
+
+		    <span class="orbit-caption" id="htmlCaption1">Slide 1</span>
+		    <span class="orbit-caption" id="htmlCaption2">Slide 2</span>
+		    <span class="orbit-caption" id="htmlCaption3">Slide 3</span>
+		</div>
+	</div>
 
 
 
@@ -363,14 +395,39 @@
 
 
 	<div id="copyright">2012 eLite Realty. All Rights Reserved | Real Eastate Advertising by Placester</div>
+	
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script src="chosen/chosen.jquery.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script src="plugins/chosen/chosen.jquery.js" type="text/javascript"></script>
 	<script type="text/javascript">$(".chosen-select").chosen({width: "10%", "disable_search": true, font: "Open Sans, sans-serif"})</script>
+	<!--<script src="plugins/foundation-5.3.0/js/foundation.min.js"></script>
+	<script src="plugins/foundation-5.3.0/js/foundation/foundation.orbit.js"></script>
+	<script>
+	    $(document).foundation({
+	    	orbit: {
+      			timer_speed: 5000,
+      		}
+	    });
+	</script>
+	-->
+	<script src="plugins/Orbit-1.2.3/jquery.orbit-1.2.3.js" type="text/javascript"></script>
+	<script type="text/javascript">
+     $(window).load(function() {
+         $('#featured').orbit({
+         	captionAnimation: 'slideOpen'
+         });
 
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+     });
+</script>
+
+<style type="text/css">
+	#featured{
+        margin: 0 auto;
+    }
+</style>
+
+
  </body>
 
 </html>
