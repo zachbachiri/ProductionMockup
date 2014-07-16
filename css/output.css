@@ -56,12 +56,6 @@ body {
       body #headers #navigation li {
         padding-right: 4px;
         padding-left: 4px; }
-  body #slideshow-wrapper #featured {
-    margin: 0 auto;
-    width: 100%;
-    height: 450px;
-    background: white url("orbit/loading.gif") no-repeat center center;
-    overflow: hidden; }
   body #search-background {
     width: 100%;
     background-color: #ededed; }
