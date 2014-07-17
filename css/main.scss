@@ -17,7 +17,7 @@ $block-heading-size: 21px;
 $center-width: 65%;
 $black: rgb(23, 23, 23);
 $grey-background: rgb(237,237, 237);
-$grey-light: rgb(144, 144, 144);
+$grey-light: rgb(150, 150, 150);
 $grey-title: rgb(75, 75, 75);
 $placester-red: rgb(231, 86, 64);
 $mobile: new-breakpoint(max-width 940px 8);
@@ -40,14 +40,14 @@ body{
 
     #top-line{
         width: 100%;
-        height: 3px;
+        height: 2px;
         background-color: $grey-background;
     }
  
 
     #headers{
         @include outer-container;
-        margin-bottom: 45px;
+        margin-bottom: 50px;
         height: 57px;
 
         ul{
@@ -74,6 +74,7 @@ body{
             width: 170px;
             background-color: $grey-background;
             margin-top: 0;
+            margin-bottom: 15px;
             padding-top: 1px;
             padding-bottom: 3px;
             padding-right: 0;
@@ -88,6 +89,7 @@ body{
         }
 
         #social{
+            paccing-top: 5px;
             clear: right;
             li{
                 height: 25px;
@@ -131,11 +133,25 @@ body{
             }
         }
         .orbit-caption {
+            font: 20pt $oswald;
             text-align: left;
             height: 60px;
             .caption{
                 @include outer-container;
             }
+        }
+        div.timer { 
+            display:none;
+        }
+        .orbit-bullets {
+            display: none;
+            height: 0;
+            li{
+                height: 0;
+            }
+        }
+        .orbit-bullets li.has-thumb {
+            height: 0;
         }
     }
 
@@ -143,6 +159,7 @@ body{
     #search-background {
         width: 100%;
         background-color: $grey-background;
+        margin-top: -40px;
         #search{
             @include outer-container;
             font: 10pt $oswald;
@@ -156,20 +173,23 @@ body{
                 font-size: 2em;
                 margin: 15px 0;
             }
+            .chosen-select{
+                margin: 0px 5px 0px 5px;
+            }
             .chosen-single{
-                height: 39px;
-                padding-top: 5px;
+                height: 30px;
+                margin: 0px 5px 0px 5px;
             }
             .chosen-drop{
                 padding-top: 10px;
                 margin-top: 10px
             }
             #forms{
-                padding-bottom: 20px;
+                padding-bottom: 27px;
                 input {
                     font: 10pt $oswald;
                     padding-left: 15px;
-                    height: 39px;
+                    height: 30px;
                     width: 30%;
                     border-radius: 3px;
                     border-style: solid;
@@ -179,12 +199,16 @@ body{
             }
         }
         #search-button{
-                color: white;
-                height: 40px;
-                background-color: $placester-red;
-                padding: 5px 15px 5px 15px;
-                border-radius: 4px;
+            font-size: 1.3em;
+            color: white;
+            height: 40px;
+            background-color: $placester-red;
+            padding: 5px 15px 5px 15px;
+            border-radius: 4px;
+            img{
+                padding-right: 10px;
             }
+        }
     }
 
 
@@ -358,7 +382,7 @@ body{
             @include span-columns(4);
             .status{
                 clear: both;
-                height: 114px;
+                height: 33%;
                 .picture{
                     float: left;
                     @include span-columns(4);
@@ -372,10 +396,8 @@ body{
                     @include span-columns(8);
                     @include omega();
                     #status-title{
-                        padding-bottom: 10px;
                     }
                     #status-content{
-                        padding-bottom: 10px;
                     }
                     a{
                         text-decoration: none;
@@ -398,8 +420,10 @@ body{
         background-color: $grey-background;
         overflow: hidden;
         clear: both;
-        h2{
+        .cities-title{
             clear: both;
+            margin: 40px 0px 40px 0px; 
+            font-size: 2em;
         }
 
         hr {
@@ -411,6 +435,7 @@ body{
         .cities{
             @include outer-container;
             background-color: $grey-background;
+            margin-bottom: 25px;
             li{
                 text-align: left;
                 display: inline-block;
@@ -435,8 +460,11 @@ body{
         margin-bottom: 1px;
         padding: 20px 0;
         a{
-            color: grey;
+            color: $grey-light;
             padding: 0 15px;
+        }
+        a:hover{
+            color: white;
         }
         nav{
             font: 8pt $oswald;
@@ -447,23 +475,39 @@ body{
 
     #social-bottom{
         margin: 0;
+        padding-top: 70px;
         float: left;
         width: 100%;
         color: $grey-light;
         background-color: $black;
         text-align: center;
-        li{
-            display: inline;
-        }
         .social-big{
             text-decoration: none;
             display: inline;
+            padding-bottom: 50px;
             a{
                 color: $grey-light;
             }
         }
+        li{
+            display: inline;
+        }
+        #social-bottom-title {
+            padding-top: 40px;
+            font-size: 2em;
+            font-weight: 300;
+            color: white;
+        }
+        #social-bottom-subtitle{
+            padding-bottom: 10px;
+            font-size: 1.3em;
+            font-weight: 300;
+            color: white;
+        }
         #contact{
             display: inline;
+            color: white;
+            font-size: 1.7em;
             li{
                 margin-right: 30px;
             }
@@ -478,7 +522,6 @@ body{
         color: $grey-light;
         background-color: $black;
         text-align: center;
-        margin-top: 3px;
     }
 }
 

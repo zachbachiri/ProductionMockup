@@ -17,13 +17,13 @@ body {
     text-decoration: none; }
   body #top-line {
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: #ededed; }
   body #headers {
     max-width: 930px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
     height: 57px; }
     body #headers:after {
       content: "";
@@ -35,7 +35,7 @@ body {
         display: inline;
         position: relative; }
     body #headers a {
-      color: #909090; }
+      color: #969696; }
     body #headers #home-button {
       float: left;
       padding-top: 15px; }
@@ -46,6 +46,7 @@ body {
       width: 170px;
       background-color: #ededed;
       margin-top: 0;
+      margin-bottom: 15px;
       padding-top: 1px;
       padding-bottom: 3px;
       padding-right: 0;
@@ -57,6 +58,7 @@ body {
         text-align: left;
         margin-left: 18px; }
     body #headers #social {
+      paccing-top: 5px;
       clear: right; }
       body #headers #social li {
         height: 25px;
@@ -84,6 +86,7 @@ body {
     body #slideshow-wrapper #featured.orbit img {
       display: block; }
   body #slideshow-wrapper .orbit-caption {
+    font: 20pt Oswald, serif;
     text-align: left;
     height: 60px; }
     body #slideshow-wrapper .orbit-caption .caption {
@@ -94,9 +97,19 @@ body {
         content: "";
         display: table;
         clear: both; }
+  body #slideshow-wrapper div.timer {
+    display: none; }
+  body #slideshow-wrapper .orbit-bullets {
+    display: none;
+    height: 0; }
+    body #slideshow-wrapper .orbit-bullets li {
+      height: 0; }
+  body #slideshow-wrapper .orbit-bullets li.has-thumb {
+    height: 0; }
   body #search-background {
     width: 100%;
-    background-color: #ededed; }
+    background-color: #ededed;
+    margin-top: -40px; }
     body #search-background #search {
       max-width: 930px;
       margin-left: auto;
@@ -115,29 +128,34 @@ body {
         font-weight: 400;
         font-size: 2em;
         margin: 15px 0; }
+      body #search-background #search .chosen-select {
+        margin: 0px 5px 0px 5px; }
       body #search-background #search .chosen-single {
-        height: 39px;
-        padding-top: 5px; }
+        height: 30px;
+        margin: 0px 5px 0px 5px; }
       body #search-background #search .chosen-drop {
         padding-top: 10px;
         margin-top: 10px; }
       body #search-background #search #forms {
-        padding-bottom: 20px; }
+        padding-bottom: 27px; }
         body #search-background #search #forms input {
           font: 10pt Oswald, serif;
           padding-left: 15px;
-          height: 39px;
+          height: 30px;
           width: 30%;
           border-radius: 3px;
           border-style: solid;
           border-color: #ededed;
           border-width: 1px; }
     body #search-background #search-button {
+      font-size: 1.3em;
       color: white;
       height: 40px;
       background-color: #e75640;
       padding: 5px 15px 5px 15px;
       border-radius: 4px; }
+      body #search-background #search-button img {
+        padding-right: 10px; }
   body #featured-neighborhoods {
     max-width: 930px;
     margin-left: auto;
@@ -151,7 +169,7 @@ body {
       display: table;
       clear: both; }
     body #featured-neighborhoods #neighborhoods-title {
-      color: #909090;
+      color: #969696;
       width: 100%;
       margin-bottom: 30px;
       margin-left: 3px;
@@ -232,14 +250,14 @@ body {
               font-size: 1.3em; }
             body #properties #posts .post-wrapper .post .posts-text .post-subtitle {
               font-weight: 300;
-              color: #909090;
+              color: #969696;
               font-size: 1.1em;
               padding-bottom: 10px; }
             body #properties #posts .post-wrapper .post .posts-text .post-text {
               font: 8pt Open Sans, sans-serif;
               font-weight: 300;
               font-size: .6em;
-              color: #909090; }
+              color: #969696; }
   body #testimonial-video {
     padding-top: 60px;
     max-width: 930px;
@@ -258,12 +276,12 @@ body {
         margin-right: 0; }
       body #testimonial-video #video #video-title {
         font: 20pt Oswald, serif;
-        color: #909090;
+        color: #969696;
         padding-bottom: 40px; }
       body #testimonial-video #video #video-text {
         padding: 30px 0px 30px 0px;
         line-height: 200%;
-        color: #909090; }
+        color: #969696; }
       body #testimonial-video #video iframe {
         width: 100%; }
     body #testimonial-video hr {
@@ -284,7 +302,7 @@ body {
     body #social-feeds .social-title {
       font: 17pt Oswald, serif;
       font-weight: 300;
-      color: #909090;
+      color: #969696;
       padding-bottom: 20px; }
     body #social-feeds #instagram, body #social-feeds #pinterest {
       text-align: left;
@@ -322,7 +340,7 @@ body {
         margin-right: 0; }
       body #social-feeds #facebook .status {
         clear: both;
-        height: 114px; }
+        height: 33%; }
         body #social-feeds #facebook .status .picture {
           float: left;
           float: left;
@@ -346,10 +364,6 @@ body {
           margin-right: 0; }
           body #social-feeds #facebook .status .status-content:last-child {
             margin-right: 0; }
-          body #social-feeds #facebook .status .status-content #status-title {
-            padding-bottom: 10px; }
-          body #social-feeds #facebook .status .status-content #status-content {
-            padding-bottom: 10px; }
           body #social-feeds #facebook .status .status-content a {
             text-decoration: none;
             text-align: left;
@@ -362,17 +376,20 @@ body {
     background-color: #ededed;
     overflow: hidden;
     clear: both; }
-    body #cities-background h2 {
-      clear: both; }
+    body #cities-background .cities-title {
+      clear: both;
+      margin: 40px 0px 40px 0px;
+      font-size: 2em; }
     body #cities-background hr {
       clear: both;
       border-top: 2px dotted;
-      color: #909090; }
+      color: #969696; }
     body #cities-background .cities {
       max-width: 930px;
       margin-left: auto;
       margin-right: auto;
-      background-color: #ededed; }
+      background-color: #ededed;
+      margin-bottom: 25px; }
       body #cities-background .cities:after {
         content: "";
         display: table;
@@ -403,33 +420,48 @@ body {
     margin-bottom: 1px;
     padding: 20px 0; }
     body #navigation-bottom a {
-      color: grey;
+      color: #969696;
       padding: 0 15px; }
+    body #navigation-bottom a:hover {
+      color: white; }
     body #navigation-bottom nav {
       font: 8pt Oswald, serif;
       text-align: center; }
   body #social-bottom {
     margin: 0;
+    padding-top: 70px;
     float: left;
     width: 100%;
-    color: #909090;
+    color: #969696;
     background-color: #171717;
     text-align: center; }
-    body #social-bottom li {
-      display: inline; }
     body #social-bottom .social-big {
       text-decoration: none;
-      display: inline; }
+      display: inline;
+      padding-bottom: 50px; }
       body #social-bottom .social-big a {
-        color: #909090; }
-    body #social-bottom #contact {
+        color: #969696; }
+    body #social-bottom li {
       display: inline; }
+    body #social-bottom #social-bottom-title {
+      padding-top: 40px;
+      font-size: 2em;
+      font-weight: 300;
+      color: white; }
+    body #social-bottom #social-bottom-subtitle {
+      padding-bottom: 10px;
+      font-size: 1.3em;
+      font-weight: 300;
+      color: white; }
+    body #social-bottom #contact {
+      display: inline;
+      color: white;
+      font-size: 1.7em; }
       body #social-bottom #contact li {
         margin-right: 30px; }
       body #social-bottom #contact a {
         color: #e75640; }
   body #copyright {
-    color: #909090;
+    color: #969696;
     background-color: #171717;
-    text-align: center;
-    margin-top: 3px; }
+    text-align: center; }
