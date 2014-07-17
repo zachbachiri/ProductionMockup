@@ -86,6 +86,14 @@ body {
   body #slideshow-wrapper .orbit-caption {
     text-align: left;
     height: 60px; }
+    body #slideshow-wrapper .orbit-caption .caption {
+      max-width: 930px;
+      margin-left: auto;
+      margin-right: auto; }
+      body #slideshow-wrapper .orbit-caption .caption:after {
+        content: "";
+        display: table;
+        clear: both; }
   body #search-background {
     width: 100%;
     background-color: #ededed; }
@@ -108,7 +116,11 @@ body {
         font-size: 2em;
         margin: 15px 0; }
       body #search-background #search .chosen-single {
-        height: 39px; }
+        height: 39px;
+        padding-top: 5px; }
+      body #search-background #search .chosen-drop {
+        padding-top: 10px;
+        margin-top: 10px; }
       body #search-background #search #forms {
         padding-bottom: 20px; }
         body #search-background #search #forms input {
@@ -124,43 +136,56 @@ body {
       color: white;
       height: 40px;
       background-color: #e75640;
-      padding: 5px;
+      padding: 5px 15px 5px 15px;
       border-radius: 4px; }
   body #featured-neighborhoods {
     max-width: 930px;
     margin-left: auto;
     margin-right: auto;
     font: 10pt Oswald, serif;
-    color: #4b4b4b; }
+    color: #4b4b4b;
+    margin-top: 50px;
+    margin-bottom: 55px; }
     body #featured-neighborhoods:after {
       content: "";
       display: table;
       clear: both; }
-    body #featured-neighborhoods #neighborhood-title {
-      color: grey-light;
+    body #featured-neighborhoods #neighborhoods-title {
+      color: #909090;
       width: 100%;
-      font-weight: .5em; }
+      margin-bottom: 30px;
+      margin-left: 3px;
+      font-size: 2em;
+      font-weight: light; }
     body #featured-neighborhoods .neighborhood {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 23.23176%;
-      /*
-      @include media($mobile){
-          @include span-columns(4);
-          @include omega(2n);
-      }
-      */ }
+      width: 23.23176%; }
       body #featured-neighborhoods .neighborhood:last-child {
         margin-right: 0; }
       body #featured-neighborhoods .neighborhood img {
         width: 100%; }
+      body #featured-neighborhoods .neighborhood .neighborhood-title {
+        margin: 10px 0px 10px 3px;
+        font-size: 1.5em; }
+        body #featured-neighborhoods .neighborhood .neighborhood-title a {
+          color: #4b4b4b; }
+        body #featured-neighborhoods .neighborhood .neighborhood-title a:hover {
+          color: #e75640;
+          text-decoration-color: none; }
+      body #featured-neighborhoods .neighborhood .neighborhood-text {
+        font: 8pt Open Sans, sans-serif;
+        margin-left: 3px; }
   body #properties {
     font: 10pt Oswald, serif;
     color: #4b4b4b;
     text-align: center;
     clear: both;
     background-color: #ededed; }
+    body #properties #properties-title {
+      font-size: 2.5em;
+      padding: 50px 0px 30px 0px; }
     body #properties #posts {
       text-align: left;
       max-width: 930px;
@@ -174,7 +199,7 @@ body {
         position: relative;
         padding-bottom: 35%;
         height: 0;
-        margin-bottom: 10px;
+        margin-bottom: 25px;
         float: left;
         display: block;
         margin-right: 2.35765%;
@@ -200,7 +225,23 @@ body {
           */ }
           body #properties #posts .post-wrapper .post img {
             width: 100%; }
+          body #properties #posts .post-wrapper .post .posts-text {
+            margin-left: 25px;
+            margin-top: 15px; }
+            body #properties #posts .post-wrapper .post .posts-text .post-title {
+              font-size: 1.3em; }
+            body #properties #posts .post-wrapper .post .posts-text .post-subtitle {
+              font-weight: 300;
+              color: #909090;
+              font-size: 1.1em;
+              padding-bottom: 10px; }
+            body #properties #posts .post-wrapper .post .posts-text .post-text {
+              font: 8pt Open Sans, sans-serif;
+              font-weight: 300;
+              font-size: .6em;
+              color: #909090; }
   body #testimonial-video {
+    padding-top: 60px;
     max-width: 930px;
     margin-left: auto;
     margin-right: auto; }
@@ -215,6 +256,14 @@ body {
       width: 48.82117%; }
       body #testimonial-video #video:last-child {
         margin-right: 0; }
+      body #testimonial-video #video #video-title {
+        font: 20pt Oswald, serif;
+        color: #909090;
+        padding-bottom: 40px; }
+      body #testimonial-video #video #video-text {
+        padding: 30px 0px 30px 0px;
+        line-height: 200%;
+        color: #909090; }
       body #testimonial-video #video iframe {
         width: 100%; }
     body #testimonial-video hr {
@@ -226,11 +275,17 @@ body {
   body #social-feeds {
     max-width: 930px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    padding: 50px 0px 50px 0px; }
     body #social-feeds:after {
       content: "";
       display: table;
       clear: both; }
+    body #social-feeds .social-title {
+      font: 17pt Oswald, serif;
+      font-weight: 300;
+      color: #909090;
+      padding-bottom: 20px; }
     body #social-feeds #instagram, body #social-feeds #pinterest {
       text-align: left;
       float: left;
@@ -250,12 +305,14 @@ body {
           margin-right: 0; }
         body #social-feeds #instagram .picture img, body #social-feeds #pinterest .picture img {
           width: 100%; }
-      body #social-feeds #instagram a, body #social-feeds #pinterest a {
-        text-decoration: none;
-        text-align: left;
-        color: #e75640; }
-      body #social-feeds #instagram a:visited, body #social-feeds #pinterest a:visited {
-        color: #e75640; }
+      body #social-feeds #instagram .social-link, body #social-feeds #pinterest .social-link {
+        margin-top: 50px; }
+        body #social-feeds #instagram .social-link a, body #social-feeds #pinterest .social-link a {
+          text-decoration: none;
+          text-align: left;
+          color: #e75640; }
+        body #social-feeds #instagram .social-link a:visited, body #social-feeds #pinterest .social-link a:visited {
+          color: #e75640; }
     body #social-feeds #facebook {
       float: left;
       display: block;
@@ -264,16 +321,20 @@ body {
       body #social-feeds #facebook:last-child {
         margin-right: 0; }
       body #social-feeds #facebook .status {
-        clear: both; }
+        clear: both;
+        height: 114px; }
         body #social-feeds #facebook .status .picture {
           float: left;
           float: left;
           display: block;
           margin-right: 2.35765%;
-          width: 31.76157%;
-          margin-right: 0; }
+          width: 31.76157%; }
           body #social-feeds #facebook .status .picture:last-child {
             margin-right: 0; }
+          body #social-feeds #facebook .status .picture:nth-child(3n) {
+            margin-right: 0; }
+          body #social-feeds #facebook .status .picture:nth-child(3n+1) {
+            clear: left; }
           body #social-feeds #facebook .status .picture img {
             width: 100%; }
         body #social-feeds #facebook .status .status-content {
@@ -285,6 +346,16 @@ body {
           margin-right: 0; }
           body #social-feeds #facebook .status .status-content:last-child {
             margin-right: 0; }
+          body #social-feeds #facebook .status .status-content #status-title {
+            padding-bottom: 10px; }
+          body #social-feeds #facebook .status .status-content #status-content {
+            padding-bottom: 10px; }
+          body #social-feeds #facebook .status .status-content a {
+            text-decoration: none;
+            text-align: left;
+            color: #e75640; }
+          body #social-feeds #facebook .status .status-content a:visited {
+            color: #e75640; }
   body #cities-background {
     font: 10pt Oswald, serif;
     text-align: center;
@@ -306,19 +377,24 @@ body {
         content: "";
         display: table;
         clear: both; }
-      body #cities-background .cities .city {
+      body #cities-background .cities li {
+        text-align: left;
+        display: inline-block;
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 14.70196%;
-        margin-right: 0;
         margin-bottom: 20px; }
-        body #cities-background .cities .city:last-child {
+        body #cities-background .cities li:last-child {
           margin-right: 0; }
-        body #cities-background .cities .city a {
+        body #cities-background .cities li:nth-child(6n) {
+          margin-right: 0; }
+        body #cities-background .cities li:nth-child(6n+1) {
+          clear: left; }
+        body #cities-background .cities li a {
           color: #171717; }
-        body #cities-background .cities .city a:hover {
-          color: red;
+        body #cities-background .cities li a:hover {
+          color: #e75640;
           text-decoration-color: none; }
   body #navigation-bottom {
     clear: both;

@@ -133,6 +133,9 @@ body{
         .orbit-caption {
             text-align: left;
             height: 60px;
+            .caption{
+                @include outer-container;
+            }
         }
     }
 
@@ -155,6 +158,11 @@ body{
             }
             .chosen-single{
                 height: 39px;
+                padding-top: 5px;
+            }
+            .chosen-drop{
+                padding-top: 10px;
+                margin-top: 10px
             }
             #forms{
                 padding-bottom: 20px;
@@ -174,7 +182,7 @@ body{
                 color: white;
                 height: 40px;
                 background-color: $placester-red;
-                padding: 5px;
+                padding: 5px 15px 5px 15px;
                 border-radius: 4px;
             }
     }
@@ -184,22 +192,36 @@ body{
         @include outer-container;
         font: 10pt $oswald;
         color: $grey-title;
-        #neighborhood-title{
-            color: grey-light;
+        margin-top: 50px;
+        margin-bottom: 55px;
+        #neighborhoods-title{
+            color: $grey-light;
             width: 100%;
-            font-weight: .5em;
+            margin-bottom: 30px;
+            margin-left: 3px;
+            font-size: 2em;
+            font-weight: light;
         }
         .neighborhood{
             @include span-columns(3);
             img{
                 width:100%;
             }
-            /*
-            @include media($mobile){
-                @include span-columns(4);
-                @include omega(2n);
+            .neighborhood-title{
+                margin: 10px 0px 10px 3px;
+                font-size: 1.5em;
+                a{
+                    color: $grey-title;
+                }
+                a:hover{
+                    color: $placester-red;
+                    text-decoration-color: none;
+                }
             }
-            */
+            .neighborhood-text{
+                font: 8pt $font-stack;
+                margin-left: 3px;
+            }
         }
     }
 
@@ -210,6 +232,10 @@ body{
         text-align: center;
         clear: both;
         background-color: $grey-background;
+        #properties-title{
+            font-size: 2.5em;
+            padding: 50px 0px 30px 0px;
+        }
         #posts{
             text-align: left;
             @include outer-container;
@@ -217,7 +243,7 @@ body{
                 position: relative;
                 padding-bottom: 35%;
                 height: 0;
-                margin-bottom: 10px;
+                margin-bottom: 25px;
                 @include span-columns(4);
                 @include omega(3n);
                 .post{
@@ -236,17 +262,50 @@ body{
                         @include omega(2n);
                     }
                     */
+                    .posts-text{
+                        margin-left: 25px;
+                        margin-top: 15px;
+                        .post-title{
+                            font-size: 1.3em;
+                        }
+                        .post-subtitle{
+                            font-weight: 300;
+                            color: $grey-light;
+                            font-size: 1.1em;
+                            padding-bottom: 10px;
+                        }
+                        .post-text{
+                            font: 8pt $font-stack;
+                            font-weight: 300;
+                            font-size: .6em;
+                            color: $grey-light;
+                        }
+                    }
+                    
                 }
             }
+
         }
+
     }
 
 
 
     #testimonial-video{
+        padding-top: 60px;
         @include outer-container;
         #video{
             @include span-columns(6);
+            #video-title{
+                font: 20pt $oswald;
+                color: $grey-light;
+                padding-bottom: 40px;
+            }
+            #video-text{
+                padding: 30px 0px 30px 0px;
+                line-height: 200%;
+                color: $grey-light;
+            }
             iframe{
                 width: 100%;
             }
@@ -265,6 +324,13 @@ body{
 
     #social-feeds {
         @include outer-container;
+        padding: 50px 0px 50px 0px;
+        .social-title{
+            font: 17pt $oswald;
+            font-weight: 300;
+            color: $grey-light;
+            padding-bottom: 20px;
+        }
         #instagram, #pinterest{
             text-align: left;
             @include span-columns(4);
@@ -276,23 +342,27 @@ body{
                     width: 100%
                 }
             }
-            a{
-                text-decoration: none;
-                text-align: left;
-                color: $placester-red;
-            }
-            a:visited{
-                color: $placester-red;
+            .social-link{
+                margin-top: 50px;
+                a{
+                    text-decoration: none;
+                    text-align: left;
+                    color: $placester-red;
+                }
+                a:visited{
+                    color: $placester-red;
+                }
             }
         }
         #facebook{
             @include span-columns(4);
             .status{
                 clear: both;
+                height: 114px;
                 .picture{
                     float: left;
                     @include span-columns(4);
-                    @include omega();
+                    @include omega(3n);
                     img{
                         width: 100%
                     }
@@ -301,6 +371,20 @@ body{
                     float: right;
                     @include span-columns(8);
                     @include omega();
+                    #status-title{
+                        padding-bottom: 10px;
+                    }
+                    #status-content{
+                        padding-bottom: 10px;
+                    }
+                    a{
+                        text-decoration: none;
+                        text-align: left;
+                        color: $placester-red;
+                    }
+                    a:visited{
+                        color: $placester-red;
+                    }
                 }
             }
         }
@@ -327,15 +411,17 @@ body{
         .cities{
             @include outer-container;
             background-color: $grey-background;
-            .city{
+            li{
+                text-align: left;
+                display: inline-block;
                 @include span-columns(2);
-                @include omega();
+                @include omega(6n);
                 margin-bottom: 20px;
                 a{
                     color: $black;
                 }
                 a:hover{
-                    color: red;
+                    color: $placester-red;
                     text-decoration-color: none;
                 }
             }  
