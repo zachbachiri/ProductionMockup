@@ -1,19 +1,24 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+//@import url('http://fonts.googleapis.com/css?family=Open+Sans');
 @import url('http://fonts.googleapis.com/css?family=Oswald');
 @import "css/bourbon/bourbon"; // or "bourbon" when in Rails
 @import "grid-settings";
 @import "css/neat/neat";
+@font-face{
+    font-family: Open Sans;
+    src: url('plugins/fonts/Open_Sans/OpenSans-Regular.ttf');
+}
 
 
 
 $font-stack: Open Sans, sans-serif;
-$oswald: Oswald, sans-serif;
+$oswald: Oswald, serif;
 $primary-color: #334;
 $block-heading-size: 21px;
 $center-width: 65%;
 $black: rgb(23, 23, 23);
 $grey-background: rgb(237,237, 237);
 $grey-light: rgb(144, 144, 144);
+$grey-title: rgb(75, 75, 75);
 $placester-red: rgb(231, 86, 64);
 $mobile: new-breakpoint(max-width 940px 8);
 
@@ -31,11 +36,18 @@ body{
     a{
         text-decoration: none;
     }
+
+
+    #top-line{
+        width: 100%;
+        height: 3px;
+        background-color: $grey-background;
+    }
  
 
     #headers{
         @include outer-container;
-        margin-bottom: 50px;
+        margin-bottom: 45px;
         height: 57px;
 
         ul{
@@ -56,46 +68,72 @@ body{
         }
 
         #accounts{
+            float: right;
             border: 2px;
-            border-radius: 3px;
+            border-radius: 0 0 3px 3px;
+            width: 170px;
             background-color: $grey-background;
             margin-top: 0;
-            ul{
-                float: right;
-                
-                li{
-                    float: right;
-                    margin-right: 5px;
-                    margin-left: 5px;
-                    
-                }
+            padding-top: 1px;
+            padding-bottom: 3px;
+            padding-right: 0;
+            padding-left: 0;
+            text-align: left;
+            font-size: 95%;
+            li{
+                clear: both;
+                text-align: left;
+                margin-left: 18px;
             }
         }
 
         #social{
-            height: 24;
-            color: $placester-red;
+            clear: right;
             li{
-                padding-left: 7px;
+                height: 25px;
+                padding-left: 4px;
+            }
+            #phone-number{
+                padding-right: 18px; 
+                font-weight: 300;
+                font-size: 1.4em;
+                vertical-align: middle;
+                color: $placester-red;
             }
         }
-        #phone-number{
-            padding-right: 25px; 
-        }
+        
 
         #navigation{
-            margin-right: 70px;
             li{
-                padding-right: 4px;
-                padding-left: 4px;
+                letter-spacing: 1px;
+                font-weight: 600;
+                padding-left: 15px;
             }
         }
     }
 
     #slideshow-wrapper{
 
-        
-
+        #featured { 
+            width: 100%;
+            height: 500px;
+            background:  center center #f4f4f4 no-repeat; 
+            overflow: hidden; 
+            img{
+                display: none;
+            } 
+        }
+        #featured.orbit{ 
+            background: none; 
+            max-height: 550px;
+            img{ 
+                display: block; 
+            }
+        }
+        .orbit-caption {
+            text-align: left;
+            height: 60px;
+        }
     }
 
 
@@ -103,26 +141,26 @@ body{
         width: 100%;
         background-color: $grey-background;
         #search{
-            font: $oswald;
             @include outer-container;
+            font: 10pt $oswald;
+            color: $grey-title;
             padding-top: 5px;
             padding-bottom: 25px;
             margin-top: 0px;
             text-align: center;
-            color: $black;
+            #search-title{
+                font-weight: 400;
+                font-size: 2em;
+                margin: 15px 0;
+            }
             .chosen-single{
                 height: 39px;
             }
-            #search-button{
-                color: white;
-                background-color: $placester-red;
-                padding: 5px;
-                border-radius: 4px;
-            }
             #forms{
                 padding-bottom: 20px;
-                font-weight: 150%;
                 input {
+                    font: 10pt $oswald;
+                    padding-left: 15px;
                     height: 39px;
                     width: 30%;
                     border-radius: 3px;
@@ -132,16 +170,24 @@ body{
                 }
             }
         }
+        #search-button{
+                color: white;
+                height: 40px;
+                background-color: $placester-red;
+                padding: 5px;
+                border-radius: 4px;
+            }
     }
 
 
     #featured-neighborhoods{
         @include outer-container;
-        color: $black;
+        font: 10pt $oswald;
+        color: $grey-title;
         #neighborhood-title{
+            color: grey-light;
             width: 100%;
-            color: $grey-light;
-            font-weight: 50%;
+            font-weight: .5em;
         }
         .neighborhood{
             @include span-columns(3);
@@ -159,6 +205,8 @@ body{
 
 
     #properties{
+        font: 10pt $oswald;
+        color: $grey-title;
         text-align: center;
         clear: both;
         background-color: $grey-background;
@@ -217,7 +265,7 @@ body{
 
     #social-feeds {
         @include outer-container;
-        #instagram, #pinterest {
+        #instagram, #pinterest{
             text-align: left;
             @include span-columns(4);
             .picture{
@@ -237,12 +285,31 @@ body{
                 color: $placester-red;
             }
         }
+        #facebook{
+            @include span-columns(4);
+            .status{
+                clear: both;
+                .picture{
+                    float: left;
+                    @include span-columns(4);
+                    @include omega();
+                    img{
+                        width: 100%
+                    }
+                }
+                .status-content{
+                    float: right;
+                    @include span-columns(8);
+                    @include omega();
+                }
+            }
+        }
     }
 
 
 
     #cities-background{
-        font: $oswald;
+        font: 10pt $oswald;
         text-align: center;
         background-color: $grey-background;
         overflow: hidden;
@@ -278,16 +345,16 @@ body{
     #navigation-bottom{
         clear: both;
         background-color: $black;
-        height: 30px;
         text-decoration: none;
         margin-bottom: 1px;
-
+        padding: 20px 0;
         a{
             color: grey;
+            padding: 0 15px;
         }
         nav{
+            font: 8pt $oswald;
             text-align: center;
-            vertical-align: middle; 
         }
     }
 
