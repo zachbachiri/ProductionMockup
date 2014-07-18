@@ -119,7 +119,7 @@ body{
         #featured { 
             z-index: -1;
             width: 100%;
-            height: 500px;
+            height: 550px;
             background:  center center #f4f4f4 no-repeat; 
             overflow: hidden; 
             img{
@@ -199,7 +199,7 @@ body{
                 input {
                     float: left;
                     font: 10pt $oswald;
-                    //padding-left: 15px;
+                    padding-left: 15px;
                     height: 30px;
                     width: 40%;
                     border-radius: 3px;
@@ -267,6 +267,7 @@ body{
         text-align: center;
         clear: both;
         background-color: $grey-background;
+        padding-bottom: 55px;
         #properties-title{
             font-size: 2.5em;
             padding: 50px 0px 30px 0px;
@@ -338,8 +339,11 @@ body{
             @include span-columns(6);
             #video-text{
                 padding: 30px 0px 30px 0px;
-                line-height: 200%;
                 color: $grey-light;
+                font: 9pt $font-stack;
+                p{
+                    line-height: 180%;
+                }
             }
             iframe{
                 width: 100%;
@@ -348,6 +352,54 @@ body{
         #testimonials{
             @include span-columns(6);
             @include omega();
+            position: relative;
+            #testimonial-slideshow{
+                color: $grey-title;
+                width: 100%;
+                .testimonial{
+                    .testimonial-quote{
+                        float: left;
+                        height: 100%;
+                        width: 75px;
+                        text-align: center;
+                        font: 50pt $font-stack;
+                    }
+                    .testimonial-text{
+                        font: 12pt $font-stack;
+                        font-style: italic;
+                    }
+                    .testimonial-link{
+                        a{
+                            font: 10pt $font-stack;
+                            font-style: italic;
+                            color: $placester-red;
+                        }
+                    }
+                }    
+            }
+            div.slider-nav span.left{
+                position: absolute;
+                content: url("../images/leftnav.png");
+                background: none;
+                height: 61px;
+                width: 61px;
+                margin-left: 35%;
+                margin-top: 30%;
+                border-radius: 50%;
+            }
+            div.slider-nav span.right{
+                position: absolute;
+                content: url("../images/rightnav.png");
+                background: none;
+                height: 61px;
+                width: 61px;
+                margin-right: 35%;
+                margin-top: 30%;
+                border-radius: 50%;
+            }
+            div.timer { 
+                display:none;
+            }
         }
 
         hr {
@@ -372,6 +424,7 @@ body{
         }
         #instagram, #pinterest{
             text-align: left;
+            font: 10pt $font-stack;
             @include span-columns(4);
             .picture{
                 float: left;
@@ -408,19 +461,28 @@ body{
                 }
                 .status-content{
                     float: right;
+                    color: $grey-title;
                     @include span-columns(8);
                     @include omega();
-                    #status-title{
+                    .status-title{
+                        font: 11pt $oswald;
+                        margin-bottom: 10px;
                     }
-                    #status-content{
+                    .status-text{
+                        font: 10pt $font-stack;
+                        margin-bottom: 13px;
                     }
-                    a{
-                        text-decoration: none;
-                        text-align: left;
-                        color: $placester-red;
-                    }
-                    a:visited{
-                        color: $placester-red;
+                    .status-link{
+                        margin-bottom: 15px;
+                        font: 10pt $font-stack;
+                        a{
+                            text-decoration: none;
+                            text-align: left;
+                            color: $placester-red;
+                        }
+                        a:visited{
+                            color: $placester-red;
+                        }
                     }
                 }
             }
@@ -496,9 +558,16 @@ body{
         background-color: $black;
         text-align: center;
         .social-big{
+            @include outer-container;
             text-decoration: none;
+            float: left;
             display: inline;
             padding-bottom: 50px;
+            text-align: center;
+            img{
+                display: block;
+                margin-bottom: 10px;
+            }
             a{
                 color: $grey-light;
             }
@@ -507,6 +576,7 @@ body{
             display: inline;
         }
         #social-bottom-title {
+            clear: both;
             padding-top: 40px;
             font-size: 2em;
             font-weight: 300;
