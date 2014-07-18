@@ -28,6 +28,7 @@ $mobile: new-breakpoint(max-width 940px 8);
 body{
     width: 100%;
     font: 8pt $font-stack;
+    font-weight: normal;
     color: $primary-color;
     margin: 0;
     padding: 0;
@@ -64,7 +65,7 @@ body{
 
         #home-button{
             float: left;
-            padding-top: 15px;
+            padding-top: 25px;
         }
 
         #accounts{
@@ -115,8 +116,8 @@ body{
     }
 
     #slideshow-wrapper{
-
         #featured { 
+            z-index: -1;
             width: 100%;
             height: 500px;
             background:  center center #f4f4f4 no-repeat; 
@@ -132,6 +133,15 @@ body{
                 display: block; 
             }
         }
+        #slideshow-links{
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            top: 400px;
+            bottom: 50px;
+            background-color: black;
+            opacity: .5;
+        }
         .orbit-caption {
             font: 20pt $oswald;
             text-align: left;
@@ -145,7 +155,8 @@ body{
         }
         .orbit-bullets {
             display: none;
-            height: 0;
+            right: 20px;
+            top: 16px
             li{
                 height: 0;
             }
@@ -174,23 +185,23 @@ body{
                 margin: 15px 0;
             }
             .chosen-select{
-                margin: 0px 5px 0px 5px;
             }
             .chosen-single{
                 height: 30px;
                 margin: 0px 5px 0px 5px;
             }
             .chosen-drop{
-                padding-top: 10px;
-                margin-top: 10px
+                padding-top: 5px;
+                width: 100%;
             }
             #forms{
                 padding-bottom: 27px;
                 input {
+                    float: left;
                     font: 10pt $oswald;
-                    padding-left: 15px;
+                    //padding-left: 15px;
                     height: 30px;
-                    width: 30%;
+                    width: 40%;
                     border-radius: 3px;
                     border-style: solid;
                     border-color: $grey-background;    
@@ -318,13 +329,13 @@ body{
     #testimonial-video{
         padding-top: 60px;
         @include outer-container;
+        .video-title{
+            font: 20pt $oswald;
+            color: $grey-light;
+            padding-bottom: 40px;
+        }
         #video{
             @include span-columns(6);
-            #video-title{
-                font: 20pt $oswald;
-                color: $grey-light;
-                padding-bottom: 40px;
-            }
             #video-text{
                 padding: 30px 0px 30px 0px;
                 line-height: 200%;
@@ -333,6 +344,10 @@ body{
             iframe{
                 width: 100%;
             }
+        }
+        #testimonials{
+            @include span-columns(6);
+            @include omega();
         }
 
         hr {
@@ -467,7 +482,6 @@ body{
             color: white;
         }
         nav{
-            font: 8pt $oswald;
             text-align: center;
         }
     }
