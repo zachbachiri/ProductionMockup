@@ -483,6 +483,8 @@
 			
 			$('#show-hide1').click(function(){
 			$("#slideshow-overlay1").slideToggle();
+			$("#slideshow-overlay2").hide();
+			$("#slideshow-overlay3").hide();
 			});
 
 		$("#slideshow-overlay2").hide();
@@ -490,6 +492,8 @@
 			
 			$('#show-hide2').click(function(){
 			$("#slideshow-overlay2").slideToggle();
+			$("#slideshow-overlay1").hide();
+			$("#slideshow-overlay3").hide();
 			});
 
 		$("#slideshow-overlay3").hide();
@@ -497,6 +501,8 @@
 			
 			$('#show-hide3').click(function(){
 			$("#slideshow-overlay3").slideToggle();
+			$("#slideshow-overlay2").hide();
+			$("#slideshow-overlay1").hide();
 			});
 
 		});
