@@ -60,62 +60,90 @@ body {
         margin-left: 18px; }
     body #headers #social {
       paccing-top: 5px;
-      clear: right; }
+      clear: right;
+      vertical-align: middle; }
       body #headers #social li {
+        vertical-align: middle;
         height: 25px;
         padding-left: 4px; }
       body #headers #social #phone-number {
         padding-right: 18px;
         font-weight: 300;
         font-size: 1.4em;
-        vertical-align: middle;
         color: #e75640; }
     body #headers #navigation li {
       letter-spacing: 1px;
       font-weight: 600;
       padding-left: 15px; }
-  body #slideshow-wrapper #featured {
-    z-index: -1;
-    width: 100%;
-    height: 550px;
-    background: center center #f4f4f4 no-repeat;
-    overflow: hidden; }
-    body #slideshow-wrapper #featured img {
-      display: none; }
-  body #slideshow-wrapper #featured.orbit {
-    background: none;
-    max-height: 550px; }
-    body #slideshow-wrapper #featured.orbit img {
-      display: block; }
-  body #slideshow-wrapper #slideshow-links {
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    top: 400px;
-    bottom: 50px;
-    background-color: black;
-    opacity: .5; }
-  body #slideshow-wrapper .orbit-caption {
-    font: 20pt Oswald, serif;
-    text-align: left;
-    height: 60px; }
-    body #slideshow-wrapper .orbit-caption .caption {
+  body #slideshow-wrapper {
+    position: relative; }
+    body #slideshow-wrapper #featured {
+      z-index: -1;
+      width: 100%;
+      height: 550px;
+      background: center center #f4f4f4 no-repeat;
+      overflow: hidden; }
+      body #slideshow-wrapper #featured img {
+        display: none; }
+    body #slideshow-wrapper #featured.orbit {
+      background: none;
+      max-height: 550px; }
+      body #slideshow-wrapper #featured.orbit img {
+        display: block; }
+    body #slideshow-wrapper #slideshow-links {
       max-width: 930px;
       margin-left: auto;
-      margin-right: auto; }
-      body #slideshow-wrapper .orbit-caption .caption:after {
+      margin-right: auto;
+      background-color: black;
+      opacity: .5;
+      position: relative; }
+      body #slideshow-wrapper #slideshow-links:after {
         content: "";
         display: table;
         clear: both; }
-  body #slideshow-wrapper div.timer {
-    display: none; }
-  body #slideshow-wrapper .orbit-bullets {
-    display: none;
-    right: 20px;
-    top: 16px li;
-      top-height: 0; }
-  body #slideshow-wrapper .orbit-bullets li.has-thumb {
-    height: 0; }
+      body #slideshow-wrapper #slideshow-links .slideshow-link {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        background-color: blue;
+        height: 50px;
+        margin: 0 5px 0 5px;
+        background-color: blue; }
+        body #slideshow-wrapper #slideshow-links .slideshow-link:last-child {
+          margin-right: 0; }
+      body #slideshow-wrapper #slideshow-links .slideshow-overlay {
+        display: none;
+        position: absolute;
+        top: -50;
+        margin-top: -25px;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        body #slideshow-wrapper #slideshow-links .slideshow-overlay:last-child {
+          margin-right: 0; }
+    body #slideshow-wrapper .orbit-caption {
+      font: 20pt Oswald, serif;
+      text-align: left;
+      height: 60px; }
+      body #slideshow-wrapper .orbit-caption .caption {
+        max-width: 930px;
+        margin-left: auto;
+        margin-right: auto; }
+        body #slideshow-wrapper .orbit-caption .caption:after {
+          content: "";
+          display: table;
+          clear: both; }
+    body #slideshow-wrapper div.timer {
+      display: none; }
+    body #slideshow-wrapper .orbit-bullets {
+      display: none;
+      right: 20px;
+      top: 16px li;
+        top-height: 0; }
+    body #slideshow-wrapper .orbit-bullets li.has-thumb {
+      height: 0; }
   body #search-background {
     width: 100%;
     background-color: #ededed;
@@ -151,7 +179,7 @@ body {
           font: 10pt Oswald, serif;
           padding-left: 15px;
           height: 30px;
-          width: 40%;
+          width: 390px;
           border-radius: 3px;
           border-style: solid;
           border-color: #ededed;

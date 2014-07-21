@@ -92,7 +92,9 @@ body{
         #social{
             paccing-top: 5px;
             clear: right;
+            vertical-align: middle;
             li{
+                vertical-align: middle;
                 height: 25px;
                 padding-left: 4px;
             }
@@ -100,7 +102,6 @@ body{
                 padding-right: 18px; 
                 font-weight: 300;
                 font-size: 1.4em;
-                vertical-align: middle;
                 color: $placester-red;
             }
         }
@@ -116,6 +117,7 @@ body{
     }
 
     #slideshow-wrapper{
+        position: relative;
         #featured { 
             z-index: -1;
             width: 100%;
@@ -134,13 +136,24 @@ body{
             }
         }
         #slideshow-links{
-            position: absolute;
-            width: 100%;
-            height: 50px;
-            top: 400px;
-            bottom: 50px;
+            @include outer-container;
             background-color: black;
             opacity: .5;
+            position: relative;
+            .slideshow-link{
+                @include span-columns(4);
+                background-color: blue;
+                height: 50px;
+                margin: 0 5px 0 5px;
+                background-color: blue;
+            }
+            .slideshow-overlay{
+                display: none;
+                position: absolute;
+                top: -50;
+                margin-top: -25px;
+                @include span-columns(4);
+            }
         }
         .orbit-caption {
             font: 20pt $oswald;
@@ -201,7 +214,7 @@ body{
                     font: 10pt $oswald;
                     padding-left: 15px;
                     height: 30px;
-                    width: 40%;
+                    width: 390px;
                     border-radius: 3px;
                     border-style: solid;
                     border-color: $grey-background;    
