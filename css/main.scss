@@ -557,19 +557,23 @@ body{
         color: $grey-light;
         background-color: $black;
         text-align: center;
-        .social-big{
-            @include outer-container;
-            text-decoration: none;
-            float: left;
-            display: inline;
-            padding-bottom: 50px;
+        #social-bigs{
             text-align: center;
-            img{
-                display: block;
-                margin-bottom: 10px;
-            }
-            a{
-                color: $grey-light;
+            @include outer-container;
+            .social-big{
+                text-decoration: none;
+                display: inline-block;
+                padding-bottom: 50px;
+                text-align: center;
+                margin-right: 20px;
+                margin-left: 20px;
+                img{
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                a{
+                    color: $grey-light;
+                }
             }
         }
         li{
@@ -577,7 +581,6 @@ body{
         }
         #social-bottom-title {
             clear: both;
-            padding-top: 40px;
             font-size: 2em;
             font-weight: 300;
             color: white;
