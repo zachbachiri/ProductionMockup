@@ -1,11 +1,11 @@
 //@import url('http://fonts.googleapis.com/css?family=Open+Sans');
-@import url('http://fonts.googleapis.com/css?family=Oswald');
+@import url('http://fonts.googleapis.com/css?family=Oswald:400,300,700');
 @import "css/bourbon/bourbon"; // or "bourbon" when in Rails
 @import "grid-settings";
 @import "css/neat/neat";
 @font-face{
     font-family: Open Sans;
-    src: url('plugins/fonts/Open_Sans/OpenSans-Regular.ttf');
+    src: url('../plugins/fonts/Open_Sans/OpenSans-Regular.ttf');
 }
 
 
@@ -124,6 +124,7 @@ body{
             height: 550px;
             background:  center center #f4f4f4 no-repeat; 
             overflow: hidden; 
+            position: relative;
             img{
                 display: none;
             } 
@@ -135,24 +136,40 @@ body{
                 display: block; 
             }
         }
-        #slideshow-links{
-            @include outer-container;
+        #slideshow-background{
+            width: 100%;
             background-color: black;
-            opacity: .5;
-            position: relative;
-            .slideshow-link{
-                @include span-columns(4);
-                background-color: blue;
-                height: 50px;
-                margin: 0 5px 0 5px;
-                background-color: blue;
-            }
-            .slideshow-overlay{
-                display: none;
-                position: absolute;
-                top: -50;
-                margin-top: -25px;
-                @include span-columns(4);
+            opacity: .6;
+            z-index: 100;
+            position: absolute;
+            bottom: 61px;
+            #slideshow-links{
+                @include outer-container;
+                .slideshow-link{
+                    @include span-columns(4);
+                    background-color: blue;
+                    height: 50px;
+                    margin: 0 5px 0 5px;
+                    background-color: blue;
+                    display: inline; 
+                }
+                .slideshow-overlay{
+                    display: none;
+                    background-color: white;
+                    position: absolute;
+                    margin-top: -25px;
+                    width: 300px;
+                }
+                #slideshow-overlay1{
+                    @include span-columns(6);
+                }
+                #slideshow-overlay2{
+                    @include span-columns(12);
+                }
+                #slideshow-overlay3{
+                    @include span-columns(6);
+                    @include shift(6);
+                }
             }
         }
         .orbit-caption {
@@ -167,6 +184,7 @@ body{
             display:none;
         }
         .orbit-bullets {
+            position: absolute;
             display: none;
             right: 20px;
             top: 16px

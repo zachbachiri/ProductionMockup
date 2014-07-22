@@ -52,15 +52,16 @@
 
  	<div id="slideshow-wrapper">
 
+ 		<div id="slideshow-background">
+	 		<div id="slideshow-links">
+	 			<div class="slideshow-overlay" id="slideshow-overlay1">OVERLAY1</div>
+			   	<div class="slideshow-overlay" id="slideshow-overlay2">OVERLAY2</div>
+			   	<div class="slideshow-overlay" id="slideshow-overlay3">OVERLAY3</div>
 
- 		<div id="slideshow-links">
- 			<div class="slideshow-overlay" id="slideshow-overlay1">OVERLAY1</div>
-		   	<div class="slideshow-overlay" id="slideshow-overlay2">OVERLAY2</div>
-		   	<div class="slideshow-overlay" id="slideshow-overlay3">OVERLAY3</div>
-
-		   	<div class="slideshow-link"><a href="#" id="show-hide1">LINK1</a></div>
-		   	<div class="slideshow-link"><a href="#" id="show-hide2">LINK2</a></div>
-		   	<div class="slideshow-link"><a href="#" id="show-hide3">LINK3</a></div>
+			   	<div class="slideshow-link"><a href="#" id="show-hide1">LINK1</a></div>
+			   	<div class="slideshow-link"><a href="#" id="show-hide2">LINK2</a></div>
+			   	<div class="slideshow-link"><a href="#" id="show-hide3">LINK3</a></div>
+			</div>
 		</div>
 
  	 	<div id="featured"> 
@@ -478,31 +479,31 @@
 		$(document).ready(function(){
 
 
-		$("#slideshow-overlay1").hide();
-			$("#show-hide1").show();
+		$("#slideshow-overlay1").hide(0);
+			$("#show-hide1").show(0);
 			
 			$('#show-hide1').click(function(){
-			$("#slideshow-overlay1").slideToggle();
-			$("#slideshow-overlay2").hide();
-			$("#slideshow-overlay3").hide();
+			$("#slideshow-overlay1").slideToggle(0);
+			$("#slideshow-overlay2").hide(0);
+			$("#slideshow-overlay3").hide(0);
 			});
 
-		$("#slideshow-overlay2").hide();
-			$("#show-hide2").show();
+		$("#slideshow-overlay2").hide(0);
+			$("#show-hide2").show(0);
 			
 			$('#show-hide2').click(function(){
-			$("#slideshow-overlay2").slideToggle();
-			$("#slideshow-overlay1").hide();
-			$("#slideshow-overlay3").hide();
+			$("#slideshow-overlay2").slideToggle(0);
+			$("#slideshow-overlay1").hide(0);
+			$("#slideshow-overlay3").hide(0);
 			});
 
-		$("#slideshow-overlay3").hide();
-			$("#show-hide3").show();
+		$("#slideshow-overlay3").hide(0);
+			$("#show-hide3").show(0);
 			
 			$('#show-hide3').click(function(){
-			$("#slideshow-overlay3").slideToggle();
-			$("#slideshow-overlay2").hide();
-			$("#slideshow-overlay1").hide();
+			$("#slideshow-overlay3").slideToggle(0);
+			$("#slideshow-overlay2").hide(0);
+			$("#slideshow-overlay1").hide(0);
 			});
 
 		});
