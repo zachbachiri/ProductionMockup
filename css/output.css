@@ -8,7 +8,7 @@
 body {
   width: 100%;
   font: 8pt Open Sans, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   color: #333344;
   margin: 0;
   padding: 0; }
@@ -19,7 +19,7 @@ body {
     height: 2px;
     background-color: #ededed; }
   body #headers {
-    max-width: 930px;
+    max-width: 920px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
@@ -97,7 +97,7 @@ body {
       position: absolute;
       bottom: 41px; }
       body #slideshow-wrapper #slideshow-background #slideshow-links {
-        max-width: 930px;
+        max-width: 920px;
         margin-left: auto;
         margin-right: auto; }
         body #slideshow-wrapper #slideshow-background #slideshow-links:after {
@@ -155,13 +155,11 @@ body {
             margin-right: 0; }
           body #slideshow-wrapper #slideshow-background #slideshow-links #slideshow-overlay2 p {
             font: 11pt Open Sans, sans-serif;
-            font-weight: 400;
             line-height: 25px;
             margin-bottom: 0;
             padding-bottom: 0; }
           body #slideshow-wrapper #slideshow-background #slideshow-links #slideshow-overlay2 a {
             font: 11pt Open Sans, sans-serif;
-            font-weight: 400;
             color: #e75640; }
         body #slideshow-wrapper #slideshow-background #slideshow-links #slideshow-overlay3 {
           float: left;
@@ -175,8 +173,8 @@ body {
           body #slideshow-wrapper #slideshow-background #slideshow-links #slideshow-overlay3:last-child {
             margin-right: 0; }
           body #slideshow-wrapper #slideshow-background #slideshow-links #slideshow-overlay3 input {
-            padding-left: 5px;
-            height: 30px;
+            padding-left: 10px;
+            height: 35px;
             border-radius: 3px;
             border-style: solid;
             border-color: #ededed;
@@ -225,7 +223,7 @@ body {
       vertical-align: middle;
       height: 40px; }
       body #slideshow-wrapper .orbit-caption .caption {
-        max-width: 930px;
+        max-width: 920px;
         margin-left: auto;
         margin-right: auto; }
         body #slideshow-wrapper .orbit-caption .caption:after {
@@ -236,22 +234,22 @@ body {
       display: none; }
     body #slideshow-wrapper .orbit-bullets {
       position: absolute;
-      display: none;
-      right: 20px;
-      top: 16px li;
-        top-height: 0; }
-    body #slideshow-wrapper .orbit-bullets li.has-thumb {
-      height: 0; }
+      width: 10%;
+      bottom: 5px;
+      z-index: 1001; }
+      body #slideshow-wrapper .orbit-bullets li {
+        color: black; }
+      body #slideshow-wrapper .orbit-bullets li.active {
+        color: #e75640; }
   body #search-background {
     width: 100%;
     background-color: #ededed;
     margin-top: -40px; }
     body #search-background #search {
-      max-width: 930px;
+      max-width: 920px;
       margin-left: auto;
       margin-right: auto;
       font: 11pt Oswald, serif;
-      font-weight: 700;
       color: #4b4b4b;
       padding-top: 5px;
       padding-bottom: 25px;
@@ -262,7 +260,6 @@ body {
         display: table;
         clear: both; }
       body #search-background #search #search-title {
-        font-weight: 400;
         font-size: 2em;
         margin: 15px 0; }
       body #search-background #search .chosen-single {
@@ -285,7 +282,6 @@ body {
           border-width: 1px; }
     body #search-background #search-button {
       font-size: 1.2em;
-      font-weight: 400;
       color: white;
       height: 40px;
       background-color: #e75640;
@@ -294,7 +290,7 @@ body {
       body #search-background #search-button img {
         padding-right: 10px; }
   body #featured-neighborhoods {
-    max-width: 930px;
+    max-width: 920px;
     margin-left: auto;
     margin-right: auto;
     font: 10pt Oswald, serif;
@@ -344,7 +340,7 @@ body {
       padding: 50px 0px 30px 0px; }
     body #properties #posts {
       text-align: left;
-      max-width: 930px;
+      max-width: 920px;
       margin-left: auto;
       margin-right: auto; }
       body #properties #posts:after {
@@ -398,18 +394,16 @@ body {
             body #properties #posts .post-wrapper .post .posts-text .post-title {
               font-size: 1.3em; }
             body #properties #posts .post-wrapper .post .posts-text .post-subtitle {
-              font-weight: 300;
+              font: 11pt Open Sans, sans-serif;
               color: #969696;
-              font-size: 1.1em;
               padding-bottom: 10px; }
             body #properties #posts .post-wrapper .post .posts-text .post-text {
-              font: 8pt Open Sans, sans-serif;
+              font: 6pt Open Sans, sans-serif;
               font-weight: 300;
-              font-size: .6em;
               color: #969696; }
   body #testimonial-video {
     padding-top: 60px;
-    max-width: 930px;
+    max-width: 920px;
     margin-left: auto;
     margin-right: auto; }
     body #testimonial-video:after {
@@ -448,19 +442,21 @@ body {
       body #testimonial-video #testimonials #testimonial-slideshow {
         color: #4b4b4b;
         width: 100%; }
-        body #testimonial-video #testimonials #testimonial-slideshow .testimonial .testimonial-quote {
-          float: left;
-          height: 100%;
-          width: 75px;
-          text-align: center;
-          font: 50pt Open Sans, sans-serif; }
-        body #testimonial-video #testimonials #testimonial-slideshow .testimonial .testimonial-text {
-          font: 12pt Open Sans, sans-serif;
-          font-style: italic; }
-        body #testimonial-video #testimonials #testimonial-slideshow .testimonial .testimonial-link {
-          font: 10pt Open Sans, sans-serif;
-          font-style: italic;
-          color: #e75640; }
+        body #testimonial-video #testimonials #testimonial-slideshow .testimonial {
+          height: 250px; }
+          body #testimonial-video #testimonials #testimonial-slideshow .testimonial .testimonial-quote {
+            float: left;
+            height: 100%;
+            width: 75px;
+            text-align: center;
+            font: 50pt Open Sans, sans-serif; }
+          body #testimonial-video #testimonials #testimonial-slideshow .testimonial .testimonial-text {
+            font: 12pt Open Sans, sans-serif;
+            font-style: italic; }
+          body #testimonial-video #testimonials #testimonial-slideshow .testimonial .testimonial-link {
+            font: 10pt Open Sans, sans-serif;
+            font-style: italic;
+            color: #e75640; }
       body #testimonial-video #testimonials div.slider-nav span.left {
         position: absolute;
         content: url("../images/leftnav.png");
@@ -468,7 +464,7 @@ body {
         height: 61px;
         width: 61px;
         margin-left: 35%;
-        margin-top: 225px;
+        margin-top: 205px;
         border-radius: 50%; }
       body #testimonial-video #testimonials div.slider-nav span.right {
         position: absolute;
@@ -477,7 +473,7 @@ body {
         height: 61px;
         width: 61px;
         margin-right: 35%;
-        margin-top: 225px;
+        margin-top: 205px;
         border-radius: 50%; }
       body #testimonial-video #testimonials div.timer {
         display: none; }
@@ -488,7 +484,7 @@ body {
       background-color: #ededed;
       height: 1px; }
   body #social-feeds {
-    max-width: 930px;
+    max-width: 920px;
     margin-left: auto;
     margin-right: auto;
     padding: 50px 0px 50px 0px; }
@@ -586,14 +582,13 @@ body {
     body #cities-background .cities-title {
       clear: both;
       margin: 40px 0px 40px 0px;
-      font-size: 2em;
-      font-weight: 400; }
+      font-size: 2em; }
     body #cities-background hr {
       clear: both;
       border-top: 2px dotted;
       color: #969696; }
     body #cities-background .cities {
-      max-width: 930px;
+      max-width: 920px;
       margin-left: auto;
       margin-right: auto;
       background-color: #ededed;
@@ -636,15 +631,16 @@ body {
       text-align: center; }
   body #social-bottom {
     margin: 0;
+    margin-bottom: 1px;
     padding-top: 70px;
-    float: left;
+    padding-bottom: 20px;
     width: 100%;
     color: #969696;
     background-color: #171717;
     text-align: center; }
     body #social-bottom #social-bigs {
       text-align: center;
-      max-width: 930px;
+      max-width: 920px;
       margin-left: auto;
       margin-right: auto; }
       body #social-bottom #social-bigs:after {
@@ -674,7 +670,8 @@ body {
       padding-bottom: 10px;
       font-size: 1.3em;
       font-weight: 300;
-      color: white; }
+      color: white;
+      margin-bottom: 40px; }
     body #social-bottom #contact {
       display: inline;
       color: white;
@@ -686,4 +683,5 @@ body {
   body #copyright {
     color: #969696;
     background-color: #171717;
-    text-align: center; }
+    text-align: center;
+    padding: 10px 0 10px 0; }
