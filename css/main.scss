@@ -1,12 +1,8 @@
-//@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700');
 @import url('http://fonts.googleapis.com/css?family=Oswald:400,300,700');
 @import "css/bourbon/bourbon"; // or "bourbon" when in Rails
 @import "grid-settings";
 @import "css/neat/neat";
-@font-face{
-    font-family: Open Sans;
-    src: url('../plugins/fonts/Open_Sans/OpenSans-Regular.ttf');
-}
 
 
 
@@ -17,6 +13,7 @@ $block-heading-size: 21px;
 $center-width: 65%;
 $black: rgb(23, 23, 23);
 $grey-background: rgb(237,237, 237);
+$grey-border: rgb(232,232, 232);
 $grey-light: rgb(150, 150, 150);
 $grey-title: rgb(75, 75, 75);
 $placester-red: rgb(231, 86, 64);
@@ -99,9 +96,10 @@ body{
                 padding-left: 4px;
             }
             #phone-number{
-                padding-right: 18px; 
+                padding-right: 18px;
                 font-weight: 300;
                 font-size: 1.4em;
+                line-height: 25px;
                 color: $placester-red;
             }
         }
@@ -109,8 +107,8 @@ body{
 
         #navigation{
             li{
-                letter-spacing: 1px;
-                font-weight: 600;
+                letter-spacing: 2px;
+                font-weight: 700;
                 padding-left: 15px;
             }
         }
@@ -138,44 +136,111 @@ body{
         }
         #slideshow-background{
             width: 100%;
-            background-color: black;
-            opacity: .6;
+            background-color: rgba(0, 0, 0, .6);
             z-index: 100;
             position: absolute;
-            bottom: 61px;
+            bottom: 41px;
             #slideshow-links{
                 @include outer-container;
                 .slideshow-link{
                     @include span-columns(4);
-                    background-color: blue;
+                    @include omega(3n);
                     height: 50px;
-                    margin: 0 5px 0 5px;
-                    background-color: blue;
                     display: inline; 
+                    align: middle;
+                    a{
+                        color: white;
+                        font: 20pt $oswald;
+                        align: middle;
+                    }
+                    a:hover{
+                        color: $placester-red;
+                    }
+                    .clicked{
+                        color: $placester-red;
+                    }
                 }
                 .slideshow-overlay{
                     display: none;
-                    background-color: white;
-                    position: absolute;
-                    margin-top: -25px;
-                    width: 300px;
+                    background-color: rgba(0, 0, 0, .6);
+                    color: white;
+                    position: relative;
+                    font: 8pt $oswald;
+                    padding: 10px 15px 0px 15px;
                 }
                 #slideshow-overlay1{
-                    @include span-columns(6);
+                    @include span-columns(7);
+                    height: 100px;
+                    margin-top: -100px;
+                    font-size: 3em;
                 }
                 #slideshow-overlay2{
                     @include span-columns(12);
+                    height: 225px;
+                    margin-top: -225px;
+                    font-size: 3em;
+                    p{
+                        font: 11pt $font-stack;
+                        font-weight: 400;
+                        line-height: 25px;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                    }
+                    a{
+                        font: 11pt $font-stack;
+                        font-weight: 400;
+                        color: $placester-red;
+                    }
                 }
                 #slideshow-overlay3{
-                    @include span-columns(6);
-                    @include shift(6);
+                    @include span-columns(7);
+                    @include shift(5);
+                    height: 350px;
+                    margin-top: -350px;
+                    font-size: 3em;
+                    input {
+                        padding-left: 5px;
+                        height: 30px;
+                        border-radius: 3px;
+                        border-style: solid;
+                        border-color: $grey-background;    
+                        border-width: 1px;
+                        font: 10pt $font-stack;
+                    }
+                    #overlay-name{
+                        @include span-columns(6);
+                        margin-bottom: 15px;
+                        margin-top: 25px;
+                    }
+                    #overlay-email{
+                        @include span-columns(6);
+                        @include omega();
+                        margin-top: 25px;
+                    }
+                    #overlay-comments{
+                        @include span-columns(12);
+                        padding-bottom: 90px;
+                        padding-top: 15px;
+                    }
+                    #overlay-button{
+                        clear: both;
+                        float: right;
+                        float: right;
+                        color: white;
+                        background-color: $placester-red;
+                        padding: 5px 15px 5px 15px;
+                        margin-top: 15px;
+                        border-radius: 3px;
+                        font-size: 12pt;
+                    }
                 }
             }
         }
         .orbit-caption {
-            font: 20pt $oswald;
+            font: 15pt $oswald;
             text-align: left;
-            height: 60px;
+            vertical-align: middle;
+            height: 40px;
             .caption{
                 @include outer-container;
             }
@@ -204,7 +269,8 @@ body{
         margin-top: -40px;
         #search{
             @include outer-container;
-            font: 10pt $oswald;
+            font: 11pt $oswald;
+            font-weight: 700;
             color: $grey-title;
             padding-top: 5px;
             padding-bottom: 25px;
@@ -242,6 +308,7 @@ body{
         }
         #search-button{
             font-size: 1.3em;
+            font-weight: 400;
             color: white;
             height: 40px;
             background-color: $placester-red;
@@ -266,7 +333,7 @@ body{
             margin-bottom: 30px;
             margin-left: 3px;
             font-size: 2em;
-            font-weight: light;
+            font-weight: 300;
         }
         .neighborhood{
             @include span-columns(3);
@@ -313,6 +380,8 @@ body{
                 margin-bottom: 25px;
                 @include span-columns(4);
                 @include omega(3n);
+                border: 2px solid;
+                border-color: $grey-border;
                 .post{
                     position: absolute;
                     top: 0;
@@ -365,6 +434,7 @@ body{
             font: 20pt $oswald;
             color: $grey-light;
             padding-bottom: 40px;
+            font-weight: 300;
         }
         #video{
             @include span-columns(6);
@@ -400,11 +470,9 @@ body{
                         font-style: italic;
                     }
                     .testimonial-link{
-                        a{
-                            font: 10pt $font-stack;
-                            font-style: italic;
-                            color: $placester-red;
-                        }
+                        font: 10pt $font-stack;
+                        font-style: italic;
+                        color: $placester-red;
                     }
                 }    
             }
@@ -415,7 +483,7 @@ body{
                 height: 61px;
                 width: 61px;
                 margin-left: 35%;
-                margin-top: 30%;
+                margin-top: 225px;
                 border-radius: 50%;
             }
             div.slider-nav span.right{
@@ -425,7 +493,7 @@ body{
                 height: 61px;
                 width: 61px;
                 margin-right: 35%;
-                margin-top: 30%;
+                margin-top: 225px;
                 border-radius: 50%;
             }
             div.timer { 
@@ -466,8 +534,9 @@ body{
                 }
             }
             .social-link{
-                margin-top: 50px;
+                
                 a{
+                    padding-top: 50px;
                     text-decoration: none;
                     text-align: left;
                     color: $placester-red;
@@ -481,7 +550,7 @@ body{
             @include span-columns(4);
             .status{
                 clear: both;
-                height: 33%;
+                height: 33.33%;
                 .picture{
                     float: left;
                     @include span-columns(4);
@@ -532,6 +601,7 @@ body{
             clear: both;
             margin: 40px 0px 40px 0px; 
             font-size: 2em;
+            font-weight: 400;
         }
 
         hr {

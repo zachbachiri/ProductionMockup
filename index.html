@@ -54,13 +54,26 @@
 
  		<div id="slideshow-background">
 	 		<div id="slideshow-links">
-	 			<div class="slideshow-overlay" id="slideshow-overlay1">OVERLAY1</div>
-			   	<div class="slideshow-overlay" id="slideshow-overlay2">OVERLAY2</div>
-			   	<div class="slideshow-overlay" id="slideshow-overlay3">OVERLAY3</div>
+	 			<div class="slideshow-overlay" id="slideshow-overlay1">
+	 				EXPLORE AREAS AROUND BOSTON
+	 			</div>
+			   	<div class="slideshow-overlay" id="slideshow-overlay2">
+			   		WE'RE LIKE NO OTHER AGENCY
+			   		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			   		<a href="#">Learn More</a>
+			   	</div>
+			   	<div class="slideshow-overlay" id="slideshow-overlay3">
+			   		WE'D LOVE TO HEAR FROM YOU<br>
+			   		<input onfocus="this.value=''" type="text" value="Name" id="overlay-name"></input>
+			   		<input onfocus="this.value=''" type="text" value="Email" id="overlay-email"></input>
+			   		<input onfocus="this.value=''" type="text" value="Comments" id="overlay-comments"></input><br>
+			   		<a href="#" id="overlay-button">SEND</a>
 
-			   	<div class="slideshow-link"><a href="#" id="show-hide1">LINK1</a></div>
-			   	<div class="slideshow-link"><a href="#" id="show-hide2">LINK2</a></div>
-			   	<div class="slideshow-link"><a href="#" id="show-hide3">LINK3</a></div>
+			   	</div>
+
+			   	<div class="slideshow-link"><a href="#" class="unclicked" id="show-hide1">AREAS</a></div>
+			   	<div class="slideshow-link"><a href="#" class="unclicked" id="show-hide2">NEIGHBORHOODS</a></div>
+			   	<div class="slideshow-link"><a href="#" class="unclicked" id="show-hide3">CITIES</a></div>
 			</div>
 		</div>
 
@@ -70,9 +83,15 @@
 		    <img src="images/slideshow3.png" style="width:100%" data-caption="#htmlCaption3"/>
 
 
-		    <span class="orbit-caption" id="htmlCaption1"><div class="caption">Slide 1</div></span>
-		    <span class="orbit-caption" id="htmlCaption2"><div class="caption">Slide 2</div></span>
-		    <span class="orbit-caption" id="htmlCaption3"><div class="caption">Slide 3</div></span>
+		    <span class="orbit-caption" id="htmlCaption1">
+		    	<div class="caption">CAPTIVATING ON ALL SCREEN SIZES</div>
+		    </span>
+		    <span class="orbit-caption" id="htmlCaption2">
+		    	<div class="caption">PLYMOUTH IS A RETINA READY WORDPRESS THEME</div>
+		    </span>
+		    <span class="orbit-caption" id="htmlCaption3">
+		    	<div class="caption">BUILT-IN IDK MLS PLUGIN</div>
+		    </span>
 		</div>
 
 	</div>
@@ -240,7 +259,7 @@
 			    	<div class="testimonial-text"><p>1. Morbi tellus nunc condimentum eget rhoncus venenatis, dignissim non ligula. Sed nec tortor ipsum. Morbi iaculis semper sodales. Proin id diam quam.</p>
 
 			    	<p>Phasellus vitae erat in pharetra sagittis nec mattis odio. Morbi dignissim lect dignissim non ligula dolor sit amet.</p></div>
-			    	<div class="testimonial-link"><a href="#">Read More</a></div>
+			    	<a href="#" class="testimonial-link">Read More</a>
 			    </div>
 
 			    <div class="testimonial">
@@ -248,7 +267,7 @@
 			    	<div class="testimonial-text"><p>2. Morbi tellus nunc condimentum eget rhoncus venenatis, dignissim non ligula. Sed nec tortor ipsum. Morbi iaculis semper sodales. Proin id diam quam.</p>
 
 			    	<p>Phasellus vitae erat in pharetra sagittis nec mattis odio. Morbi dignissim lect dignissim non ligula dolor sit amet.</p></div>
-			    	<div class="testimonial-link"><a href="#">Read More</a></div>
+			    	<a href="#" class="testimonial-link">Read More</a>
 			    </div>
 
 			    <div class="testimonial">
@@ -256,7 +275,7 @@
 			    	<div class="testimonial-text"><p>3. Morbi tellus nunc condimentum eget rhoncus venenatis, dignissim non ligula. Sed nec tortor ipsum. Morbi iaculis semper sodales. Proin id diam quam.</p>
 
 			    	<p>Phasellus vitae erat in pharetra sagittis nec mattis odio. Morbi dignissim lect dignissim non ligula dolor sit amet.</p></div>
-			    	<div class="testimonial-link"><a href="#">Read More</a></div>
+			    	<a href="#" class="testimonial-link">Read More</a>
 			    </div>
 			</div>
 
@@ -470,7 +489,7 @@
 	</script>
 	<script type="text/javascript">
      $(window).load(function() {
-         $('#testimonial-slideshow').orbit({bullets: false, fluid: true});
+         $('#testimonial-slideshow').orbit({bullets: false, fluid: true,});
 
      });
 	</script>
@@ -483,6 +502,7 @@
 			$("#show-hide1").show(0);
 			
 			$('#show-hide1').click(function(){
+				event.preventDefault();
 			$("#slideshow-overlay1").slideToggle(0);
 			$("#slideshow-overlay2").hide(0);
 			$("#slideshow-overlay3").hide(0);
@@ -492,6 +512,7 @@
 			$("#show-hide2").show(0);
 			
 			$('#show-hide2').click(function(){
+				event.preventDefault();
 			$("#slideshow-overlay2").slideToggle(0);
 			$("#slideshow-overlay1").hide(0);
 			$("#slideshow-overlay3").hide(0);
@@ -501,6 +522,7 @@
 			$("#show-hide3").show(0);
 			
 			$('#show-hide3').click(function(){
+				event.preventDefault();
 			$("#slideshow-overlay3").slideToggle(0);
 			$("#slideshow-overlay2").hide(0);
 			$("#slideshow-overlay1").hide(0);
@@ -508,6 +530,20 @@
 
 		});
 
+	</script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('a.unclicked').click(function(){
+			$(this).addclass('clicked').siblings().removeClass('clicked');;
+			$(this).removeclass('unclicked');
+		});
+
+		$('a.clicked').click(function(){
+			$(this).addclass('unclicked').siblings().removeClass('unclicked');;
+			$(this).removeclass('clicked');
+		});
+	});
 	</script>
 
 
