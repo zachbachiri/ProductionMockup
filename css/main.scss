@@ -17,7 +17,7 @@ $grey-border: rgb(232,232, 232);
 $grey-light: rgb(150, 150, 150);
 $grey-title: rgb(75, 75, 75);
 $placester-red: rgb(231, 86, 64);
-$mobile: new-breakpoint(max-width 940px 8);
+$mobile: new-breakpoint(max-width 700px 8);
 
 
 
@@ -307,7 +307,7 @@ body{
             }
         }
         #search-button{
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: 400;
             color: white;
             height: 40px;
@@ -380,6 +380,10 @@ body{
                 margin-bottom: 25px;
                 @include span-columns(4);
                 @include omega(3n);
+                @include media($mobile){
+                    @include span-columns(4);
+                    @include omega();
+                }
                 border: 2px solid;
                 border-color: $grey-border;
                 .post{

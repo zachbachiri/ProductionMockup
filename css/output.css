@@ -284,7 +284,7 @@ body {
           border-color: #ededed;
           border-width: 1px; }
     body #search-background #search-button {
-      font-size: 1.3em;
+      font-size: 1.2em;
       font-weight: 400;
       color: white;
       height: 40px;
@@ -368,6 +368,15 @@ body {
           margin-right: 0; }
         body #properties #posts .post-wrapper:nth-child(3n+1) {
           clear: left; }
+        @media screen and (max-width: 700px) {
+          body #properties #posts .post-wrapper {
+            float: left;
+            display: block;
+            margin-right: 3.57866%;
+            width: 48.21067%;
+            margin-right: 0; }
+            body #properties #posts .post-wrapper:last-child {
+              margin-right: 0; } }
         body #properties #posts .post-wrapper .post {
           position: absolute;
           top: 0;
