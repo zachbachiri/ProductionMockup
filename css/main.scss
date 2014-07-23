@@ -68,7 +68,7 @@ body{
             float: right;
             border: 2px;
             border-radius: 0 0 3px 3px;
-            width: 175px;
+            width: 165px;
             background-color: $grey-background;
             margin-top: 0;
             margin-bottom: 20px;
@@ -81,7 +81,7 @@ body{
             li{
                 clear: both;
                 text-align: left;
-                margin-left: 18px;
+                margin-left: 15px;
             }
             img{
                 padding-right: 3px;
@@ -143,15 +143,15 @@ body{
             background-color: rgba(0, 0, 0, .6);
             z-index: 100;
             position: absolute;
-            bottom: 46px;
+            bottom: 61px;
             #slideshow-links{
                 @include outer-container;
                 .slideshow-link{
                     position: relative;
                     @include span-columns(4);
                     @include omega(3n);
-                    padding-top: 10px;
-                    height: 60px;
+                    padding-top: 15px;
+                    height: 70px;
                     display: inline; 
                     align: middle;
                     .unclicked{
@@ -167,20 +167,20 @@ body{
                     }
                     .arrow{
                         position: absolute;
-                        width: 13px;
-                        height: 16px;
+                        width: 17px;
+                        height: 17px;
                         right: 0;
-                        bottom: 23px;
+                        bottom: 25px;
                         padding-top: 15px;
                         background-image: url("../images/sidearrow.png");
                         background-size: auto;
                     }
                     .uparrow{
                         position: absolute;
-                        width: 13px;
-                        height: 16px;
+                        width: 17px;
+                        height: 17px;
                         right: 0;
-                        bottom: 23px;
+                        bottom: 25px;
                         padding-top: 15px;
                         background-image: url("../images/uparrow.png");
                         background-size: auto;
@@ -263,7 +263,8 @@ body{
             font: 15pt $oswald;
             text-align: left;
             vertical-align: middle;
-            height: 45px;
+            height: 60px;
+            padding-top: 15px;
             .caption{
                 @include outer-container;
             }
@@ -275,9 +276,15 @@ body{
             @include outer-container;
             position: absolute;
             width: 10%;
-            bottom: 5px;
+            bottom: 13px;
             left: 75%;
             z-index: 1001; //one more than .orbit-caption 
+        }
+        div.slider-nav span.left{
+            border-radius: 0 10px 10px 0;
+        }
+        div.slider-nav span.right{
+            border-radius: 10px 0 0 10px;
         }
     }
 
