@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,700');
 @import url('http://fonts.googleapis.com/css?family=Oswald:400,300,700');
 @import "css/bourbon/bourbon"; // or "bourbon" when in Rails
 @import "grid-settings";
@@ -93,7 +93,7 @@ body{
             clear: right;
             height: 25px;
             li{
-                padding-left: 4px;
+                padding-left: 5px;
             }
             #phone-number{
                 position: absolute;
@@ -101,7 +101,6 @@ body{
                 width: 170px;
                 right: 0px;
                 margin-right: 15px;
-                padding-bottom: 25px;
                 font-weight: 300;
                 font-size: 1.5em;
                 color: $placester-red;
@@ -111,7 +110,8 @@ body{
 
         #navigation{
             li{
-                letter-spacing: 2px;
+                letter-spacing: .5px;
+                font: 10pt $font-stack;
                 font-weight: 700;
                 padding-left: 15px;
             }
@@ -121,7 +121,7 @@ body{
         }
     }
 
-    #slideshow-wrapper{
+    #main-slideshow{
         position: relative;
         #featured { 
             z-index: -1;
@@ -162,10 +162,10 @@ body{
                         font: 20pt $oswald;
                         align: middle;
                     }
-                    a:hover{
+                    .clicked{
                         color: $placester-red;
                     }
-                    .clicked{
+                    a:hover{
                         color: $placester-red;
                     }
                     .arrow{
@@ -278,9 +278,8 @@ body{
         .orbit-bullets {
             @include outer-container;
             position: absolute;
-            width: 10%;
             bottom: 13px;
-            left: 75%;
+            left: 80%;
             z-index: 1001; //one more than .orbit-caption 
         }
         div.slider-nav span.left{
@@ -289,6 +288,13 @@ body{
         div.slider-nav span.right{
             border-radius: 10px 0 0 10px;
         }
+        div.slider-nav span.right:hover {
+            //background: url(../images/rightarrow-red.png);
+            }
+
+        div.slider-nav span.left:hover {
+            //background: url(../images/leftarrow-red.png);
+            }
     }
 
 
@@ -316,6 +322,16 @@ body{
                 border-width: 1px;
                 border-style: solid;
                 border-color: $grey-search-border;
+                span{
+                    text-align: left;
+                    padding-left: 5px;
+                    color: $grey-title;
+                    font-size: 1.1em;
+                }
+                div b{
+                    height: 50%;
+                    margin-top: 5px;
+                }
             }
             .chosen-drop{
                 padding-top: 5px;
@@ -440,6 +456,7 @@ body{
                         margin-top: 15px;
                         .post-title{
                             font-size: 1.3em;
+                            margin-bottom: 3px;
                         }
                         .post-subtitle{
                             font: 11pt $font-stack;
@@ -562,22 +579,19 @@ body{
             font: 10pt $font-stack;
             @include span-columns(4);
             .picture{
-                float: left;
                 @include span-columns(4);
                 @include omega();
+                margin-right: 4px;
                 img{
-                    width: 100%
+                    width: 100%;
                 }
             }
             .social-link{
-                
+                display: inline-block;
+                margin-top: 10px;
                 a{
-                    padding-top: 50px;
                     text-decoration: none;
                     text-align: left;
-                    color: $placester-red;
-                }
-                a:visited{
                     color: $placester-red;
                 }
             }
@@ -586,11 +600,9 @@ body{
             @include span-columns(4);
             .status{
                 clear: both;
-                height: 33.33%;
+                height: 33%;
                 .picture{
-                    float: left;
                     @include span-columns(4);
-                    @include omega(3n);
                     img{
                         width: 100%
                     }
