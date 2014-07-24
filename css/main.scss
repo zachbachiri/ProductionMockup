@@ -5,6 +5,12 @@
 @import "css/neat/neat";
 
 
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter($grid-columns, $gutter); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+
 
 $font-stack: Open Sans, sans-serif;
 $oswald: Oswald, serif;
@@ -18,7 +24,7 @@ $grey-search-border: rgb(200,200, 200);
 $grey-light: rgb(150, 150, 150);
 $grey-title: rgb(75, 75, 75);
 $placester-red: rgb(231, 86, 64);
-$mobile: new-breakpoint(max-width 700px 8);
+$mobile: new-breakpoint(max-width 768px 12);
 
 
 
@@ -154,7 +160,6 @@ body{
                     padding-top: 15px;
                     height: 70px;
                     display: inline; 
-                    float: left;
                     align: middle;
                     .unclicked{
                         color: white;
@@ -174,6 +179,7 @@ body{
                         right: 0;
                         bottom: 25px;
                         padding-top: 15px;
+                        margin-right: 20px;
                         background-image: url("../images/sidearrow.png");
                         background-size: auto;
                     }
@@ -184,6 +190,7 @@ body{
                         right: 0;
                         bottom: 25px;
                         padding-top: 15px;
+                        margin-right: 20px;
                         background-image: url("../images/uparrow.png");
                         background-size: auto;
                     }
@@ -343,13 +350,12 @@ body{
             #forms{
                 padding-bottom: 27px;
                 input {
-                    float: left;
                     font: 10pt $oswald;
                     color: $grey-title;
                     padding-left: 15px;
                     margin-right: 7px;
                     height: 35px;
-                    width: 390px;
+                    width: 42%;
                     border-radius: 2px;
                     border-style: solid;
                     border-color: $grey-search-border;    
@@ -377,6 +383,9 @@ body{
         color: $grey-title;
         margin-top: 50px;
         margin-bottom: 55px;
+        @include media($mobile) {
+            margin-left: 10px;
+        }
         #neighborhoods-title{
             color: $grey-light;
             width: 100%;
@@ -387,11 +396,17 @@ body{
         }
         .neighborhood{
             @include span-columns(3);
+            @include media($mobile) {
+                max-width: 310px;
+                @include span-columns(6);
+                padding: 0;
+                margin: 0;
+            }
             img{
                 width:100%;
             }
             .neighborhood-title{
-                margin: 10px 0px 10px 3px;
+                margin: 10px 0px 10px 0px;
                 font-size: 1.5em;
                 a{
                     color: $grey-title;
@@ -403,7 +418,7 @@ body{
             }
             .neighborhood-text{
                 font: 8pt $font-stack;
-                margin-left: 3px;
+                margin-left: 0px;
             }
         }
     }
@@ -432,8 +447,8 @@ body{
                 @include span-columns(4);
                 @include omega(3n);
                 @include media($mobile){
-                    @include span-columns(4);
-                    @include omega();
+                    @include span-columns(6);
+                    @include omega(2n);
                 }
                 border: 2px solid;
                 border-color: $grey-border;
@@ -447,12 +462,6 @@ body{
                     img{
                         width:100%;
                     }
-                    /*
-                    @include media($mobile) {
-                        @include span-columns(4);
-                        @include omega(2n);
-                    }
-                    */
                     .posts-text{
                         margin-left: 25px;
                         margin-top: 15px;

@@ -116,7 +116,6 @@ body {
           padding-top: 15px;
           height: 70px;
           display: inline;
-          float: left;
           align: middle; }
           body #main-slideshow #slideshow-background #slideshow-links .slideshow-link:last-child {
             margin-right: 0; }
@@ -135,6 +134,7 @@ body {
             right: 0;
             bottom: 25px;
             padding-top: 15px;
+            margin-right: 20px;
             background-image: url("../images/sidearrow.png");
             background-size: auto; }
           body #main-slideshow #slideshow-background #slideshow-links .slideshow-link .uparrow {
@@ -144,6 +144,7 @@ body {
             right: 0;
             bottom: 25px;
             padding-top: 15px;
+            margin-right: 20px;
             background-image: url("../images/uparrow.png");
             background-size: auto; }
         body #main-slideshow #slideshow-background #slideshow-links .slideshow-link:hover a {
@@ -314,13 +315,12 @@ body {
       body #search-background #search #forms {
         padding-bottom: 27px; }
         body #search-background #search #forms input {
-          float: left;
           font: 10pt Oswald, serif;
           color: #4b4b4b;
           padding-left: 15px;
           margin-right: 7px;
           height: 35px;
-          width: 390px;
+          width: 42%;
           border-radius: 2px;
           border-style: solid;
           border-color: #c8c8c8;
@@ -346,6 +346,9 @@ body {
       content: "";
       display: table;
       clear: both; }
+    @media screen and (max-width: 768px) {
+      body #featured-neighborhoods {
+        margin-left: 10px; } }
     body #featured-neighborhoods #neighborhoods-title {
       color: #969696;
       width: 100%;
@@ -360,10 +363,21 @@ body {
       width: 23.23176%; }
       body #featured-neighborhoods .neighborhood:last-child {
         margin-right: 0; }
+      @media screen and (max-width: 768px) {
+        body #featured-neighborhoods .neighborhood {
+          max-width: 310px;
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 48.82117%;
+          padding: 0;
+          margin: 0; }
+          body #featured-neighborhoods .neighborhood:last-child {
+            margin-right: 0; } }
       body #featured-neighborhoods .neighborhood img {
         width: 100%; }
       body #featured-neighborhoods .neighborhood .neighborhood-title {
-        margin: 10px 0px 10px 3px;
+        margin: 10px 0px 10px 0px;
         font-size: 1.5em; }
         body #featured-neighborhoods .neighborhood .neighborhood-title a {
           color: #4b4b4b; }
@@ -372,7 +386,7 @@ body {
           text-decoration-color: none; }
       body #featured-neighborhoods .neighborhood .neighborhood-text {
         font: 8pt Open Sans, sans-serif;
-        margin-left: 3px; }
+        margin-left: 0px; }
   body #properties {
     font: 10pt Oswald, serif;
     color: #4b4b4b;
@@ -410,28 +424,25 @@ body {
           margin-right: 0; }
         body #properties #posts .post-wrapper:nth-child(3n+1) {
           clear: left; }
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width: 768px) {
           body #properties #posts .post-wrapper {
             float: left;
             display: block;
-            margin-right: 3.57866%;
-            width: 48.21067%;
-            margin-right: 0; }
+            margin-right: 2.35765%;
+            width: 48.82117%; }
             body #properties #posts .post-wrapper:last-child {
-              margin-right: 0; } }
+              margin-right: 0; }
+            body #properties #posts .post-wrapper:nth-child(2n) {
+              margin-right: 0; }
+            body #properties #posts .post-wrapper:nth-child(2n+1) {
+              clear: left; } }
         body #properties #posts .post-wrapper .post {
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: white;
-          /*
-          @include media($mobile) {
-              @include span-columns(4);
-              @include omega(2n);
-          }
-          */ }
+          background-color: white; }
           body #properties #posts .post-wrapper .post img {
             width: 100%; }
           body #properties #posts .post-wrapper .post .posts-text {
