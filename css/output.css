@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700");
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
 @import url("http://fonts.googleapis.com/css?family=Oswald:400,300,700");
 * {
   -webkit-box-sizing: border-box;
@@ -9,7 +9,6 @@ body {
   width: 100%;
   font: 8pt Open Sans, sans-serif;
   font-weight: 400;
-  color: #333344;
   margin: 0;
   padding: 0; }
   body a {
@@ -117,20 +116,17 @@ body {
           padding-top: 15px;
           height: 70px;
           display: inline;
+          float: left;
           align: middle; }
           body #main-slideshow #slideshow-background #slideshow-links .slideshow-link:last-child {
             margin-right: 0; }
-          body #main-slideshow #slideshow-background #slideshow-links .slideshow-link:nth-child(3n) {
-            margin-right: 0; }
-          body #main-slideshow #slideshow-background #slideshow-links .slideshow-link:nth-child(3n+1) {
-            clear: left; }
           body #main-slideshow #slideshow-background #slideshow-links .slideshow-link .unclicked {
             color: white;
             font: 20pt Oswald, serif;
             align: middle; }
           body #main-slideshow #slideshow-background #slideshow-links .slideshow-link .clicked {
             color: #e75640; }
-          body #main-slideshow #slideshow-background #slideshow-links .slideshow-link a:hover {
+          body #main-slideshow #slideshow-background #slideshow-links .slideshow-link div:hover {
             color: #e75640; }
           body #main-slideshow #slideshow-background #slideshow-links .slideshow-link .arrow {
             position: absolute;
@@ -150,6 +146,8 @@ body {
             padding-top: 15px;
             background-image: url("../images/uparrow.png");
             background-size: auto; }
+        body #main-slideshow #slideshow-background #slideshow-links .slideshow-link:hover a {
+          color: #e75640; }
         body #main-slideshow #slideshow-background #slideshow-links .slideshow-overlay {
           display: none;
           background-color: rgba(0, 0, 0, 0.6);

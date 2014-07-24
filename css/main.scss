@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,700');
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
 @import url('http://fonts.googleapis.com/css?family=Oswald:400,300,700');
 @import "css/bourbon/bourbon"; // or "bourbon" when in Rails
 @import "grid-settings";
@@ -27,7 +27,6 @@ body{
     width: 100%;
     font: 8pt $font-stack;
     font-weight: 400;
-    color: $primary-color;
     margin: 0;
     padding: 0;
 
@@ -152,10 +151,10 @@ body{
                 .slideshow-link{
                     position: relative;
                     @include span-columns(4);
-                    @include omega(3n);
                     padding-top: 15px;
                     height: 70px;
                     display: inline; 
+                    float: left;
                     align: middle;
                     .unclicked{
                         color: white;
@@ -165,7 +164,7 @@ body{
                     .clicked{
                         color: $placester-red;
                     }
-                    a:hover{
+                    div:hover{
                         color: $placester-red;
                     }
                     .arrow{
@@ -188,6 +187,9 @@ body{
                         background-image: url("../images/uparrow.png");
                         background-size: auto;
                     }
+                }
+                .slideshow-link:hover a{
+                    color: $placester-red;
                 }
                 .slideshow-overlay{
                     display: none;
