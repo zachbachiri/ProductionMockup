@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
 @import url('http://fonts.googleapis.com/css?family=Oswald:400,300,700');
-@import "css/bourbon/bourbon"; // or "bourbon" when in Rails
+@import "bourbon/bourbon"; // or "bourbon" when in Rails
 @import "grid-settings";
-@import "css/neat/neat";
+@import "neat/neat";
 
 
 @mixin omega-reset($nth) {
@@ -24,7 +24,9 @@ $grey-search-border: rgb(200,200, 200);
 $grey-light: rgb(150, 150, 150);
 $grey-title: rgb(75, 75, 75);
 $placester-red: rgb(231, 86, 64);
-$mobile: new-breakpoint(max-width 768px 12);
+$tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 480px 4);
+$tablet-margin: 0 30px;
 
 
 
@@ -35,6 +37,7 @@ body{
     font-weight: 400;
     margin: 0;
     padding: 0;
+    @include omega;
 
 
     a{
@@ -46,11 +49,17 @@ body{
         width: 100%;
         height: 2px;
         background-color: $grey-background;
+        @include media($tablet){
+            display: none;
+        }
     }
  
 
     #headers{
         @include outer-container;
+        @include media($tablet){
+            margin: $tablet-margin;
+        }
         margin-bottom: 10px;
 
         ul{
@@ -68,6 +77,14 @@ body{
         #home-button{
             float: left;
             padding-top: 25px;
+            @include media($tablet){
+                padding-top: 5px;
+                width: 150px;
+                float: left;
+                img{
+                    width: 100%;
+                }
+            }
         }
 
         #accounts{
@@ -92,6 +109,9 @@ body{
             img{
                 padding-right: 3px;
             }
+            @include media($tablet){
+                display: none;
+            }
         }
 
         #social{
@@ -110,18 +130,28 @@ body{
                 font-size: 1.5em;
                 color: $placester-red;
             }
+            @include media($tablet){
+                display: none;
+            }
         }
         
 
         #navigation{
             li{
                 letter-spacing: .5px;
-                font: 10pt $font-stack;
+                font: 1.1em $font-stack;
                 font-weight: 700;
                 padding-left: 15px;
             }
             a:hover{
                 color: $placester-red;
+            }
+            @include media($tablet){
+                text-align: left;
+                margin-left: 150px;
+                #contact-nav{
+                    display: none;
+                }
             }
         }
     }
@@ -138,12 +168,21 @@ body{
             img{
                 display: none;
             } 
+            @include media($tablet){
+                min-height: 500px;
+            }
         }
         #featured.orbit{ 
             background: none; 
             max-height: 550px;
             img{ 
                 display: block; 
+            }
+            @include media($tablet){
+                min-height: 500px;
+                img{
+                    height: 100%;
+                }
             }
         }
         #slideshow-background{
@@ -152,8 +191,15 @@ body{
             z-index: 100;
             position: absolute;
             bottom: 61px;
+            @include media($tablet){
+                background: none;
+                bottom: 30px;
+            }
             #slideshow-links{
                 @include outer-container;
+                @include media($tablet){
+                    margin: 0 60px;
+                }
                 .slideshow-link{
                     position: relative;
                     @include span-columns(4);
@@ -163,8 +209,12 @@ body{
                     align: middle;
                     .unclicked{
                         color: white;
-                        font: 20pt $oswald;
+                        font: 2.5em $oswald;
                         align: middle;
+                    }
+                    @include media($tablet){
+                        @include span-columns(8);
+                        margin: 0;
                     }
                     .clicked{
                         color: $placester-red;
@@ -194,6 +244,11 @@ body{
                         background-image: url("../images/uparrow.png");
                         background-size: auto;
                     }
+                    @include media($tablet){
+                        margin-bottom: 10px;
+                        padding-left: 10px;
+                        background-color: rgba(0, 0, 0, .6);
+                    }
                 }
                 .slideshow-link:hover a{
                     color: $placester-red;
@@ -203,7 +258,7 @@ body{
                     background-color: rgba(0, 0, 0, .6);
                     color: white;
                     position: relative;
-                    font: 8pt $oswald;
+                    font: 1em $oswald;
                     padding: 15px 20px 0px 20px;
                 }
                 #slideshow-overlay1{
@@ -218,13 +273,13 @@ body{
                     margin-top: -225px;
                     font-size: 3em;
                     p{
-                        font: 11pt $font-stack;
+                        font: .5em $font-stack;
                         line-height: 25px;
                         margin-bottom: 0;
                         padding-bottom: 0;
                     }
                     a{
-                        font: 11pt $font-stack;
+                        font: .4em $font-stack;
                         color: $placester-red;
                     }
                 }
@@ -241,7 +296,7 @@ body{
                         border-style: solid;
                         border-color: $grey-background;    
                         border-width: 1px;
-                        font: 10pt $font-stack;
+                        font: .5em $font-stack;
                     }
                     #overlay-name{
                         @include span-columns(6);
@@ -266,19 +321,27 @@ body{
                         padding: 5px 15px 5px 15px;
                         margin-top: 15px;
                         border-radius: 3px;
-                        font-size: 12pt;
+                        font-size: .6em;
                     }
                 }
             }
         }
         .orbit-caption {
-            font: 15pt $oswald;
+            font: 1.8em $oswald;
             text-align: left;
             vertical-align: middle;
             height: 60px;
             padding-top: 15px;
+            display: none;
+            @include media($tablet){
+                height: 0;
+                padding: 0;
+            }
             .caption{
                 @include outer-container;
+                @include media($tablet){
+                    display: none;
+                }
             }
         }
         div.timer { 
@@ -290,12 +353,21 @@ body{
             bottom: 13px;
             left: 80%;
             z-index: 1001; //one more than .orbit-caption 
+            @include media($tablet){
+                display: none;
+            }
         }
         div.slider-nav span.left{
             border-radius: 0 10px 10px 0;
+            @include media($tablet){
+                    display: none;
+                }
         }
         div.slider-nav span.right{
             border-radius: 10px 0 0 10px;
+            @include media($tablet){
+                display: none;
+            }
         }
         div.slider-nav span.right:hover {
             //background: url(../images/rightarrow-red.png);
@@ -308,12 +380,14 @@ body{
 
 
     #search-background {
-        width: 100%;
         background-color: $grey-background;
         margin-top: -40px;
         #search{
             @include outer-container;
-            font: 12pt $oswald;
+            @include media($tablet){
+                margin: $tablet-margin;
+            }
+            font: 1.5em $oswald;
             color: $grey-title;
             padding-top: 5px;
             padding-bottom: 30px;
@@ -321,11 +395,14 @@ body{
             text-align: center;
             #search-title{
                 font-size: 2em;
+                @include media($tablet){
+                    font-size: 1.6em;
+                }
                 margin: 20px 0;
             }
             .chosen-single{
                 height: 35px;
-                margin: 0px 5px 0px 5px;
+                margin: 0px 5px 0px 0;
                 padding-top: 4px;
                 border-radius: 3px;
                 border-width: 1px;
@@ -335,7 +412,7 @@ body{
                     text-align: left;
                     padding-left: 5px;
                     color: $grey-title;
-                    font-size: 1.1em;
+                    font-size: 1em;
                 }
                 div b{
                     height: 50%;
@@ -344,13 +421,13 @@ body{
             }
             .chosen-drop{
                 padding-top: 5px;
-                margin-left: 5px;
-                width: 92%;
             }
             #forms{
+                text-align: left;
                 padding-bottom: 27px;
+                width: 100%;
                 input {
-                    font: 10pt $oswald;
+                    font: .8em $oswald;
                     color: $grey-title;
                     padding-left: 15px;
                     margin-right: 7px;
@@ -360,6 +437,10 @@ body{
                     border-style: solid;
                     border-color: $grey-search-border;    
                     border-width: 1px;
+                    @include media($tablet){
+                        @include span-columns(8);
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }
@@ -370,8 +451,15 @@ body{
             background-color: $placester-red;
             padding: 5px 15px 5px 15px;
             border-radius: 4px;
+            clear: both;
             img{
                 padding-right: 10px;
+            }
+            @include media($tablet){
+                width: 66%;
+                font-size: 1em;
+                margin-bottom: 100px;
+                clear: both;
             }
         }
     }
@@ -379,34 +467,36 @@ body{
 
     #featured-neighborhoods{
         @include outer-container;
-        font: 10pt $oswald;
+        @include media($tablet){
+            margin: $tablet-margin;
+            font-size: 1em;
+            font-weight: 400;
+
+        }
+        font: 1.2em $oswald;
         color: $grey-title;
         margin-top: 50px;
         margin-bottom: 55px;
-        @include media($mobile) {
-            margin-left: 10px;
-        }
         #neighborhoods-title{
             color: $grey-light;
             width: 100%;
-            margin-bottom: 30px;
             margin-left: 3px;
             font-size: 2em;
             font-weight: 300;
         }
         .neighborhood{
             @include span-columns(3);
-            @include media($mobile) {
-                max-width: 310px;
-                @include span-columns(6);
-                padding: 0;
-                margin: 0;
+            @include media($tablet) {
+                @include span-columns(4);
+                @include omega();
+                margin-bottom: 20px;
             }
             img{
                 width:100%;
             }
             .neighborhood-title{
-                margin: 10px 0px 10px 0px;
+                margin-top: 10px;
+                margin-bottom: 10px;
                 font-size: 1.5em;
                 a{
                     color: $grey-title;
@@ -417,15 +507,20 @@ body{
                 }
             }
             .neighborhood-text{
-                font: 8pt $font-stack;
-                margin-left: 0px;
+                font: .9em $font-stack;
+                @include media($tablet){
+                    font-size: 1.2em;    
+                }
             }
         }
     }
 
 
     #properties{
-        font: 10pt $oswald;
+        font: 1.2em $oswald;
+        @include media($tablet){
+            font: 1.1em $oswald;
+        }
         color: $grey-title;
         text-align: center;
         clear: both;
@@ -439,16 +534,23 @@ body{
         #posts{
             text-align: left;
             @include outer-container;
+            @include media($tablet){
+                margin: $tablet-margin;
+            }
             .post-wrapper{
                 position: relative;
-                padding-bottom: 35%;
                 height: 0;
                 margin-bottom: 25px;
                 @include span-columns(4);
                 @include omega(3n);
-                @include media($mobile){
-                    @include span-columns(6);
+                padding: 0;
+                padding-bottom: 35%;
+                @include media($tablet){
+                    @include span-columns(4);
+                    @include omega-reset(3n);
                     @include omega(2n);
+                    padding: 0;
+                    padding-bottom: 50%;
                 }
                 border: 2px solid;
                 border-color: $grey-border;
@@ -470,12 +572,12 @@ body{
                             margin-bottom: 3px;
                         }
                         .post-subtitle{
-                            font: 11pt $font-stack;
+                            font: 1.1em $font-stack;
                             color: $grey-light;
                             padding-bottom: 10px;
                         }
                         .post-text{
-                            font: 6pt $font-stack;
+                            font: .7em $font-stack;
                             font-weight: 300;
                             color: $grey-light;
                         }
@@ -493,18 +595,24 @@ body{
     #testimonial-video{
         padding-top: 60px;
         @include outer-container;
+        @include media($tablet){
+            margin: $tablet-margin;
+        }
         .video-title{
-            font: 20pt $oswald;
+            font: 2.5em $oswald;
             color: $grey-light;
             padding-bottom: 40px;
             font-weight: 300;
         }
         #video{
             @include span-columns(6);
+            @include media($tablet){
+                @include span-columns(8);
+            }
             #video-text{
                 padding: 30px 0px 30px 0px;
                 color: $grey-light;
-                font: 9pt $font-stack;
+                font: 1.1em $font-stack;
                 p{
                     line-height: 180%;
                 }
@@ -516,6 +624,9 @@ body{
         #testimonials{
             @include span-columns(6);
             @include omega();
+            @include media($tablet){
+                @include span-columns(8);
+            }
             position: relative;
             #testimonial-slideshow{
                 color: $grey-title;
@@ -527,14 +638,14 @@ body{
                         height: 100%;
                         width: 75px;
                         text-align: center;
-                        font: 50pt $font-stack;
+                        font: 6.2em $font-stack;
                     }
                     .testimonial-text{
-                        font: 12pt $font-stack;
+                        font: 1.5em $font-stack;
                         font-style: italic;
                     }
                     .testimonial-link{
-                        font: 10pt $font-stack;
+                        font: 1.3em $font-stack;
                         font-style: italic;
                         color: $placester-red;
                     }
@@ -547,7 +658,11 @@ body{
                 height: 61px;
                 width: 61px;
                 margin-left: 35%;
-                margin-top: 205px;
+                margin-top: 50px;
+                @include media($tablet){
+                    margin-left: 40%;
+                    margin-top: 50px;
+                }
                 border-radius: 50%;
             }
             div.slider-nav span.right{
@@ -558,6 +673,10 @@ body{
                 width: 61px;
                 margin-right: 35%;
                 margin-top: 205px;
+                @include media($tablet){
+                    margin-right: 40%;
+                    margin-top: 50px;
+                }
                 border-radius: 50%;
             }
             div.timer { 
@@ -578,16 +697,22 @@ body{
 
     #social-feeds {
         @include outer-container;
+        @include media($tablet){
+            margin: $tablet-margin;
+        }
         padding: 50px 0px 50px 0px;
         .social-title{
-            font: 17pt $oswald;
+            font: 2.2em $oswald;
             font-weight: 300;
             color: $grey-light;
             padding-bottom: 20px;
         }
         #instagram, #pinterest{
+            @include media($tablet){
+                display: none;
+            }
             text-align: left;
-            font: 10pt $font-stack;
+            font: 1.2em $font-stack;
             @include span-columns(4);
             .picture{
                 @include span-columns(4);
@@ -609,6 +734,10 @@ body{
         }
         #facebook{
             @include span-columns(4);
+            @include media($tablet){
+                @include span-columns(4);
+                @include shift(4);
+            }
             .status{
                 clear: both;
                 height: 33%;
@@ -624,16 +753,16 @@ body{
                     @include span-columns(8);
                     @include omega();
                     .status-title{
-                        font: 11pt $oswald;
+                        font: 1.3em $oswald;
                         margin-bottom: 10px;
                     }
                     .status-text{
-                        font: 10pt $font-stack;
+                        font: 1.2em $font-stack;
                         margin-bottom: 13px;
                     }
                     .status-link{
                         margin-bottom: 15px;
-                        font: 10pt $font-stack;
+                        font: 1.2em $font-stack;
                         a{
                             text-decoration: none;
                             text-align: left;
@@ -651,7 +780,7 @@ body{
 
 
     #cities-background{
-        font: 11pt $oswald;
+        font: 1.4em $oswald;
         text-align: center;
         background-color: $grey-background;
         overflow: hidden;
@@ -670,12 +799,20 @@ body{
 
         .cities{
             @include outer-container;
+            @include media($tablet){
+                margin: $tablet-margin;
+            }
             background-color: $grey-background;
             margin-bottom: 25px;
             li{
                 display: inline-block;
                 @include span-columns(2);
                 @include omega(6n);
+                @include media($tablet){
+                    @include span-columns(2);
+                    @include omega-reset(6n);
+                    @include omega(4n);
+                }
                 margin-bottom: 20px;
                 a{
                     color: $black;
@@ -685,6 +822,11 @@ body{
                     text-decoration-color: none;
                 }
             }  
+            li:nth-last-child(-n+4){
+                @include media($tablet){
+                    display: none;
+                }
+            }
         }
     }
 
@@ -694,7 +836,7 @@ body{
         text-decoration: none;
         margin-bottom: 1px;
         padding: 30px 0;
-        font-size: 10pt;
+        font-size: 1.2em;
         a{
             color: $grey-light;
             padding: 0 15px;
@@ -757,8 +899,16 @@ body{
             display: inline;
             color: white;
             font-size: 1.8em;
+            text-align: center;
             li{
+                display: inline;
                 margin-right: 70px;
+                @include media($tablet){
+                    div{
+                        float: left;
+                        width: 45%;
+                    }
+                }
             }
             a{
                 color: $placester-red;
