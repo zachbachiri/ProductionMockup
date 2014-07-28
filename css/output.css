@@ -32,7 +32,8 @@ body {
       clear: both; }
     @media screen and (max-width: 768px) {
       body #headers {
-        margin: 0 30px; } }
+        margin: 0 30px;
+        margin-bottom: 15px; } }
     body #headers ul {
       text-align: right; }
       body #headers ul li {
@@ -100,7 +101,9 @@ body {
     @media screen and (max-width: 768px) {
       body #headers #navigation {
         text-align: left;
-        margin-left: 150px; }
+        margin-left: 150px;
+        padding-top: 10px;
+        font-size: 1.2em; }
         body #headers #navigation #contact-nav {
           display: none; } }
   body #main-slideshow {
@@ -450,6 +453,11 @@ body {
       margin-left: 3px;
       font-size: 2em;
       font-weight: 300; }
+      @media screen and (max-width: 768px) {
+        body #featured-neighborhoods #neighborhoods-title {
+          margin-top: 40px;
+          margin-bottom: 30px;
+          font-size: 2.5em; } }
     body #featured-neighborhoods .neighborhood {
       float: left;
       display: block;
@@ -459,14 +467,18 @@ body {
         margin-right: 0; }
       @media screen and (max-width: 768px) {
         body #featured-neighborhoods .neighborhood {
+          margin: 0;
           float: left;
           display: block;
           margin-right: 3.57866%;
           width: 48.21067%;
-          margin-right: 0;
           margin-bottom: 20px; }
           body #featured-neighborhoods .neighborhood:last-child {
-            margin-right: 0; } }
+            margin-right: 0; }
+          body #featured-neighborhoods .neighborhood:nth-child(3n) {
+            margin-right: 0; }
+          body #featured-neighborhoods .neighborhood:nth-child(3n+1) {
+            clear: left; } }
       body #featured-neighborhoods .neighborhood img {
         width: 100%; }
       body #featured-neighborhoods .neighborhood .neighborhood-title {
@@ -478,6 +490,9 @@ body {
         body #featured-neighborhoods .neighborhood .neighborhood-title a:hover {
           color: #e75640;
           text-decoration-color: none; }
+        @media screen and (max-width: 768px) {
+          body #featured-neighborhoods .neighborhood .neighborhood-title {
+            font-size: 1.8em; } }
       body #featured-neighborhoods .neighborhood .neighborhood-text {
         font: 0.9em Open Sans, sans-serif; }
         @media screen and (max-width: 768px) {
@@ -568,6 +583,8 @@ body {
               font: 0.7em Open Sans, sans-serif;
               font-weight: 300;
               color: #969696; }
+      body #properties #posts .mobile-remove {
+        display: none; }
   body #testimonial-video {
     padding-top: 60px;
     max-width: 920px;
@@ -650,7 +667,7 @@ body {
         height: 61px;
         width: 61px;
         margin-left: 35%;
-        margin-top: 50px;
+        margin-top: 205px;
         border-radius: 50%; }
         @media screen and (max-width: 768px) {
           body #testimonial-video #testimonials div.slider-nav span.left {
@@ -791,6 +808,9 @@ body {
       clear: both;
       border-top: 2px dotted;
       color: #969696; }
+      @media screen and (max-width: 768px) {
+        body #cities-background hr {
+          display: none; } }
     body #cities-background .cities {
       max-width: 920px;
       margin-left: auto;
@@ -900,17 +920,19 @@ body {
       margin-bottom: 30px;
       letter-spacing: 1px; }
     body #social-bottom #contact {
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
       display: inline;
       color: white;
-      font-size: 1.8em;
-      text-align: center; }
+      font-size: 2em;
+      font-weight: 600; }
+      body #social-bottom #contact:after {
+        content: "";
+        display: table;
+        clear: both; }
       body #social-bottom #contact li {
-        display: inline;
         margin-right: 70px; }
-        @media screen and (max-width: 768px) {
-          body #social-bottom #contact li div {
-            float: left;
-            width: 45%; } }
       body #social-bottom #contact a {
         color: #e75640; }
   body #copyright {

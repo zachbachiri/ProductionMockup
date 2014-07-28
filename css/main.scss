@@ -59,6 +59,7 @@ body{
         @include outer-container;
         @include media($tablet){
             margin: $tablet-margin;
+            margin-bottom: 15px;
         }
         margin-bottom: 10px;
 
@@ -149,6 +150,8 @@ body{
             @include media($tablet){
                 text-align: left;
                 margin-left: 150px;
+                padding-top: 10px;
+                font-size: 1.2em;
                 #contact-nav{
                     display: none;
                 }
@@ -478,6 +481,11 @@ body{
         margin-top: 50px;
         margin-bottom: 55px;
         #neighborhoods-title{
+            @include media($tablet){
+                margin-top: 40px;
+                margin-bottom: 30px;
+                font-size: 2.5em;
+            }
             color: $grey-light;
             width: 100%;
             margin-left: 3px;
@@ -487,8 +495,9 @@ body{
         .neighborhood{
             @include span-columns(3);
             @include media($tablet) {
+                margin: 0;
                 @include span-columns(4);
-                @include omega();
+                @include omega(3n);
                 margin-bottom: 20px;
             }
             img{
@@ -504,6 +513,9 @@ body{
                 a:hover{
                     color: $placester-red;
                     text-decoration-color: none;
+                }
+                @include media($tablet){
+                    font-size: 1.8em;
                 }
             }
             .neighborhood-text{
@@ -582,8 +594,10 @@ body{
                             color: $grey-light;
                         }
                     }
-                    
                 }
+            }
+            .mobile-remove{
+                display: none;
             }
 
         }
@@ -658,7 +672,7 @@ body{
                 height: 61px;
                 width: 61px;
                 margin-left: 35%;
-                margin-top: 50px;
+                margin-top: 205px;
                 @include media($tablet){
                     margin-left: 40%;
                     margin-top: 50px;
@@ -795,6 +809,9 @@ body{
             clear: both;
             border-top: 2px dotted;
             color: $grey-light;
+            @include media($tablet){
+                display: none;
+            }
         }
 
         .cities{
@@ -896,19 +913,13 @@ body{
             letter-spacing: 1px;
         }
         #contact{
+            @include outer-container;
             display: inline;
             color: white;
-            font-size: 1.8em;
-            text-align: center;
+            font-size: 2em;
+            font-weight: 600;
             li{
-                display: inline;
                 margin-right: 70px;
-                @include media($tablet){
-                    div{
-                        float: left;
-                        width: 45%;
-                    }
-                }
             }
             a{
                 color: $placester-red;
