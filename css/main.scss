@@ -45,19 +45,63 @@ body{
     }
 
     #main-navigation {
+
         float: left;
-        width:0; 
-        height:100px;
-        background-color:#F30;
-        color:#FFF; 
-        text-align:center; 
-        font-size:30px;
-        overflow:hidden;
+        width: 0; 
+        background-color: white;
+        color: #FFF; 
+        text-align: left; 
+        margin-top: 0;
+        padding-top: 0;
+        height: 100vh;
+        overflow-y: scroll !important;
+        position: fixed;
+        z-index: -2;
+        ul{
+            display: inline;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            li{
+                border-bottom: 1px groove $grey-background;
+                overflow-y: scroll;
+                a{
+                    display: block;
+                    width: 100%;
+
+                }
+                .side-menu-section{
+                    background: -webkit-linear-gradient($grey-background , $grey-search-border); 
+                    background: -o-linear-gradient($grey-background , $grey-search-border); 
+                    background: -moz-linear-gradient($grey-background , $grey-search-border); 
+                    background: linear-gradient($grey-background , $grey-search-border); 
+                    color: $grey-title;
+                    height: 30px;
+                    padding-left: 15px;
+                    padding-top: 7px;
+                    font-weight: 700;
+                }
+                .side-menu-item{
+                    height: 48px;
+                    color: $grey-title;
+                    padding-left: 15px;
+                    padding-top: 15px;
+                    font-size: 1.3em;
+                    font-weight: 600;
+                }
+                .side-menu-item:hover{
+                    background-color: $grey-background;
+                    color: $placester-red;
+                }
+            }
+        }
     }
 
 
     #page-wrap {
         float: right;
+        box-shadow: -2px 0px 3px 2px $grey-search-border;
+        overflow: auto;
 
         #top-line{
             width: 100%;
@@ -72,9 +116,12 @@ body{
         #headers{
             @include outer-container;
             @include media($tablet){
+                position: fixed;
+                background-color: white;
                 width: 100%;
-                margin: 0 15px;
-                margin-bottom: 15px;
+                padding: 0 15px;
+                padding-bottom: 15px;
+                z-index: 1002;
             }
             margin-bottom: 10px;
 
@@ -92,7 +139,7 @@ body{
 
             #home-button{
                 float: left;
-                padding-top: 25px;
+                margin-top: 10px;
                 @include media($tablet){
                     padding-top: 5px;
                     width: 150px;
@@ -104,6 +151,7 @@ body{
             }
             #mobile-menu{
                 display: none;
+                margin-top: 10px;
                 @include media($tablet){
                     display: inline;
                     float: left;
@@ -174,7 +222,7 @@ body{
                     text-align: left;
                     margin-left: 170px;
                     padding-top: 10px;
-                    font-size: 1.2em;
+                    font-size: 1em;
                     #contact-nav{
                         display: none;
                     }
@@ -428,7 +476,7 @@ body{
                 }
                 .chosen-single{
                     height: 35px;
-                    margin: 0px 5px 0px 0;
+                    margin: 0px 1% 0px 0;
                     padding-top: 4px;
                     border-radius: 3px;
                     border-width: 1px;
@@ -596,6 +644,7 @@ body{
                         width: 100%;
                         height: 100%;
                         background-color: white;
+                        overflow: hidden;
                         img{
                             width:100%;
                         }

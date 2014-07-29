@@ -19,9 +19,27 @@
 
  <body>
 
- 	<div id="main-navigation">
-	   <a href="#">Nav Links</a>
-	   <!-- more -->
+ 	<div id="main-navigation" style="overflow-y:scroll;">
+	   <ul>
+	   	<li><div class="side-menu-section">NAVIGATION</div></li>
+	   	<li><a href="#" class="side-menu-item">ABOUT</a></li>
+	   	<li><a href="#" class="side-menu-item">AGENTS</a></li>
+	   	<li><a href="#" class="side-menu-item">BLOG</a></li>
+	   	<li><a href="#" class="side-menu-item">BUYERS</a></li>
+	   	<li><a href="#" class="side-menu-item">CONTACT</a></li>
+	   	<li><a href="#" class="side-menu-item">LISTINGS</a></li>
+	   	<li><a href="#" class="side-menu-item">MY ACCOUNT</a></li>
+	   	<li><a href="#" class="side-menu-item">NEIGHBORHOODS</a></li>
+	   	<li><a href="#" class="side-menu-item">SALES SEARCH</a></li>
+	   	<li><a href="#" class="side-menu-item">SEARCH</a></li>
+	   	<li><a href="#" class="side-menu-item">SELLERS</a></li>
+	   	<li><a href="#" class="side-menu-item">SERVICES</a></li>
+	   	<li><a href="#" class="side-menu-item">TEST PAGE</a></li>
+	   	<li><a href="#" class="side-menu-item">TESTIMONIALS</a></li>
+	   	<li><div class="side-menu-section">ACCOUNT</div></li>
+	   	<li><a href="#" class="side-menu-item">LOGIN</a></li>
+	   	<li><a href="#" class="side-menu-item">REGISTER</a></li>
+	   </ul>
 	</div>
 
 
@@ -548,7 +566,7 @@
 
 	<script type="text/javascript">
 	$(".chosen-select").chosen({
-		width: "24.5%", 
+		width: "24.3%", 
 		disable_search: true, 
 		font: "Open Sans, sans-serif",
 
@@ -572,10 +590,11 @@
 	<script src="plugins/Orbit-master/jquery.orbit-1.3.0.js" type="text/javascript"></script>
 
 	<script type="text/javascript">
-	$('#mobile-menu').click(function() {  
+	$('#mobile-menu').click(function(e) {  
+		e.preventDefault();
 		if($('#main-navigation').width() == 0) {
-			$('#page-wrap').animate({ width: '80%' })
-			$('#main-navigation').animate({ width: '20%' })
+			$('#page-wrap').animate({ width: '65%' })
+			$('#main-navigation').animate({ width: '35%' })
 		} 
 		else {
 			$('#main-navigation').animate({ width: '0' })
