@@ -115,8 +115,10 @@
                 display: none;
                 @include media($tablet){
                     display: inline;
+                    position: absolute;
+                    right: 10px;
+                    top: 22px;
                     float: right;
-                    z-index: 10003;
                 }
             }
         }

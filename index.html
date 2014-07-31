@@ -76,9 +76,11 @@
 		 		<li><a href="#">OUR TEAM</a></li>
 		 		<li id="contact-nav"><a href="#">CONTACT</a></li>
 		 	</ul>
+
+		 	<a href="#" id="mobile-logout"><img src="images/logout.png"></a>
 	 	</div>
 
-	 	<a href="#" id="mobile-logout"><img src="images/logout.png"></a>
+
 
 
 
@@ -609,8 +611,7 @@
 		if($('#main-navigation').width() == 0) {
 			$('#page-wrap').animate({ width: '65%' })
 			$('#main-navigation').animate({ width: '35%' })
-		} 
-		else {
+		} else {
 			$('#main-navigation').animate({ width: '0' })
 			$('#page-wrap').animate({ width: '100%' })
 		}

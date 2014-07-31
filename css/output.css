@@ -160,8 +160,10 @@
     @media screen and (max-width: 768px) {
       #headers #mobile-logout {
         display: inline;
-        float: right;
-        z-index: 10003; } }
+        position: absolute;
+        right: 10px;
+        top: 22px;
+        float: right; } }
 
 #main-slideshow {
   position: relative; }
@@ -271,6 +273,9 @@
         position: relative;
         font: 1em Oswald, serif;
         padding: 15px 20px 0px 20px; }
+        @media screen and (max-width: 768px) {
+          #main-slideshow #slideshow-background #slideshow-links .slideshow-overlay {
+            position: absolute; } }
       #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay1 {
         float: left;
         display: block;
@@ -281,6 +286,10 @@
         font-size: 3em; }
         #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay1:last-child {
           margin-right: 0; }
+        @media screen and (max-width: 768px) {
+          #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay1 {
+            margin-top: 0;
+            position: absolute; } }
       #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay2 {
         float: left;
         display: block;
@@ -299,6 +308,10 @@
         #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay2 a {
           font: 0.4em Open Sans, sans-serif;
           color: #e75640; }
+        @media screen and (max-width: 768px) {
+          #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay2 {
+            margin-top: 0;
+            position: absolute; } }
       #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay3 {
         float: left;
         display: block;
@@ -354,6 +367,10 @@
           margin-top: 15px;
           border-radius: 3px;
           font-size: .6em; }
+        @media screen and (max-width: 768px) {
+          #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay3 {
+            margin-top: 0;
+            position: absolute; } }
   #main-slideshow .orbit-caption {
     font: 1.8em Oswald, serif;
     text-align: left;
