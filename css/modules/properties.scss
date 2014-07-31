@@ -1,0 +1,81 @@
+@import "variables";
+
+#properties{
+            font: 1.2em $oswald;
+            @include media($tablet){
+                font-size: 1.6vw;
+            }
+            @include media($mobile){
+                font-size: 2.8vw;
+            }
+            color: $grey-title;
+            text-align: center;
+            clear: both;
+            background-color: $grey-background;
+            padding-bottom: 55px;
+            padding-top: 60px;
+            #properties-title{
+                font-size: 2.5em;
+                padding-bottom: 30px;
+            }
+            #posts{
+                text-align: left;
+                @include outer-container;
+                @include media($tablet){
+                    margin: $tablet-margin;
+                }
+                .post-wrapper{
+                    position: relative;
+                    height: 0;
+                    margin-bottom: 25px;
+                    @include span-columns(4);
+                    @include omega(3n);
+                    padding: 0;
+                    padding-bottom: 35%;
+                    border: 2px solid;
+                    border-color: $grey-border;
+                    @include media($tablet){
+                        @include span-columns(4);
+                        @include omega-reset(3n);
+                        @include omega(2n);
+                        padding: 0;
+                        padding-bottom: 50%;
+                    }
+                    @include media($mobile){
+                        @include span-columns(4);
+                        padding-bottom: 100%
+                    }
+                    .post{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: white;
+                        overflow: hidden;
+                        img{
+                            width:100%;
+                        }
+                        .posts-text{
+                            margin-left: 25px;
+                            margin-top: 15px;
+                            .post-title{
+                                font-size: 1.3em;
+                                margin-bottom: 3px;
+                            }
+                            .post-subtitle{
+                                font: 1.1em $font-stack;
+                                color: $grey-light;
+                                padding-bottom: 10px;
+                            }
+                            .post-text{
+                                font: .7em $font-stack;
+                                font-weight: 300;
+                                color: $grey-light;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }

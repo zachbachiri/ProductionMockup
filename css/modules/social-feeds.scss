@@ -1,0 +1,157 @@
+@import "variables";
+
+#social-feeds {
+            @include outer-container;
+            @include media($tablet){
+                margin: $tablet-margin;
+            }
+            padding: 50px 0px 50px 0px;
+            .social-title{
+                font: 2.2em $oswald;
+                font-weight: 300;
+                color: $grey-light;
+                padding-bottom: 20px;
+                @include media($tablet){
+                    font: 2.5em $oswald;
+                    font-weight: 300;
+                    margin-bottom: 25px;
+                }
+            }
+            #instagram, #pinterest{
+                text-align: left;
+                @include span-columns(4);
+                .picture{
+                    @include span-columns(4);
+                    @include omega();
+                    margin-right: 4px;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .social-link{
+                    font: 1.2em $font-stack;
+                    display: inline-block;
+                    margin-top: 10px;
+                    a{
+                        text-decoration: none;
+                        text-align: left;
+                        color: $placester-red;
+                    }
+                }
+            }
+            #get-in-touch{
+                display: none;
+                color: $grey-title;
+                font: 1em $font-stack;
+                @include media($tablet){
+                    @include span-columns(4);
+                }
+                @include media($mobile){
+                    @include span-columns(4);
+                }
+                input {
+                    width: 100%;
+                    margin-bottom: 15px;
+                    height: 40px;
+                    padding-left: 15px;
+                    border-radius: 3px;
+                    border-style: solid;
+                    border-color: $grey-search-border;    
+                    border-width: 1px;
+                    font-weight: 600;
+                    font-size: 1.3em;
+                }
+                #intouch-comments{
+                    height: 115px;
+                }
+                #intouch-button{
+                    float: right;
+                    color: white;
+                    font: 1.5em $oswald;
+                    background-color: $placester-red;
+                    padding: 7px 15px 7px 15px;
+                    margin-top: 7px;
+                    border-radius: 3px;
+                }
+                #intouch-text{
+                    float: left;
+                    font-size: 1.3em;
+                    font-weight: 300;
+                    margin-top: 15px;
+                }
+            }
+            #facebook{
+                @include span-columns(4);
+                hr{
+                    display: none;
+                }
+                @include media($tablet){
+                    @include span-columns(4);
+                    hr{
+                        display: block;
+                        width: 100%;
+                        border: 0;
+                        border-bottom: 1px dashed $grey-light;
+                        margin-bottom: 25px;
+                    }
+                }
+                @include media($mobile){
+                    @include span-columns(4);
+                }
+                .status{
+                    clear: both;
+                    height: 33%;
+                    .picture{
+                        @include span-columns(4);
+                        img{
+                            width: 100%;
+                            @include media($tablet){
+                                display: none;
+                            }
+                        }
+                    }
+                    .status-content{
+                        float: right;
+                        color: $grey-title;
+                        padding-top: 0;
+                        @include span-columns(8);
+                        @include omega();
+                        .status-title{
+                            font: 1.1em $oswald;
+                            margin-bottom: 10px;
+                        }
+                        .status-text{
+                            font: 1.2em $font-stack;
+                            margin-bottom: 13px;
+                        }
+                        .status-link{
+                            margin-bottom: 15px;
+                            font: 1.2em $font-stack;
+                            a{
+                                text-decoration: none;
+                                text-align: left;
+                                color: $placester-red;
+                            }
+                            a:visited{
+                                color: $placester-red;
+                            }
+                        }
+                        @include media($tablet){
+                            width: 100%;
+                            img, .status-title, .status-link{
+                                display: none;
+                            }
+                            .status-text{
+                                font-size: 1.3em;
+                                font-weight: 300;
+                                line-height: 25px;
+                                margin: 0 0 25px 0;
+                                a{
+                                    color: $placester-red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }

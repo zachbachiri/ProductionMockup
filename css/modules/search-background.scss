@@ -1,0 +1,93 @@
+@import "variables";
+
+#search-background {
+            background-color: $grey-background;
+            margin-top: -40px;
+            #search{
+                @include outer-container;
+                @include media($tablet){
+                    margin: $tablet-margin;
+                }
+                font: 1.5em $oswald;
+                color: $grey-title;
+                padding-top: 25px;
+                padding-bottom: 40px;
+                text-align: center;
+                #search-title{
+                    font-size: 1.8em;
+                    @include media($tablet){
+                        font-size: 1.6em;
+                    }
+                    margin-bottom: 20px;
+                }
+
+                //override the chosen element style for width
+                .chosen-container, .chosen-container-single, .chosen-container-single-nonsearch{
+                    margin: 0;
+                    width: 13.7% !important;
+                    @include media($tablet){
+                        width: 24.5% !important;
+                    }
+                }
+                .chosen-single{
+                    height: 35px;
+                    margin: 0;
+                    padding-top: 4px;
+                    border-radius: 3px;
+                    border-width: 1px;
+                    border-style: solid;
+                    border-color: $grey-search-border;
+                    margin-right: 5%;
+                    span{
+                        text-align: left;
+                        padding-left: 5px;
+                        color: $grey-title;
+                        font-size: 1em;
+                    }
+                    div b{
+                        height: 50%;
+                        margin-top: 5px;
+                    }
+                }
+                .chosen-drop{
+                    padding-top: 5px;
+                }
+                #forms{
+                    text-align: left;
+                    padding-bottom: 27px;
+                    input {
+                        font: .8em $oswald;
+                        color: $grey-title;
+                        padding-left: 15px;
+                        margin-right: 7px;
+                        height: 35px;
+                        width: 42%;
+                        border-radius: 2px;
+                        border-style: solid;
+                        border-color: $grey-search-border;    
+                        border-width: 1px;
+                        @include media($tablet){
+                            @include span-columns(8);
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+            #search-button{
+                font-size: 1.2em;
+                color: white;
+                height: 35px;
+                background-color: $placester-red;
+                padding: 5px 15px 5px 15px;
+                border-radius: 4px;
+                clear: both;
+                img{
+                    padding-right: 10px;
+                }
+                @include media($tablet){
+                    width: 66%;
+                    font-size: 1em;
+                    clear: both;
+                }
+            }
+        }

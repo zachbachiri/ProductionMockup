@@ -1,0 +1,63 @@
+@import "variables";
+
+#cities-background{
+            font: 1.4em $oswald;
+            text-align: center;
+            background-color: $grey-background;
+            color: $grey-title;
+            overflow: hidden;
+            clear: both;
+            .cities-title{
+                clear: both;
+                margin: 50px 0px 40px 0px; 
+                font-size: 2em;
+            }
+
+            hr {
+                clear: both;
+                border-top: 2px dotted;
+                color: $grey-light;
+                @include media($tablet){
+                    display: none;
+                }
+            }
+
+            .cities{
+                @include outer-container;
+                margin-bottom: 50px;
+                @include media($tablet){
+                    margin: $tablet-margin;
+                    li{
+                        font-size: 1.2em;
+                    }
+                }
+                background-color: $grey-background;
+                ul{
+                    padding-left: 0;
+                }
+                li{
+                    display: inline-block;
+                    @include span-columns(2);
+                    @include omega(6n);
+                    @include media($tablet){
+                        @include span-columns(2);
+                        @include omega-reset(6n);
+                        @include omega(4n);
+                    }
+                    margin-bottom: 20px;
+                    a{
+                        color: $grey-title;
+                    }
+                    a:hover{
+                        color: $placester-red;
+                        text-decoration-color: none;
+                    }
+                }  
+                li:nth-last-child(-n+4){
+                    @include media($tablet){
+                        display: none;
+                    }
+                }
+
+            }
+        }

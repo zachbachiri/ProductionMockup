@@ -1,0 +1,102 @@
+@import "variables";
+
+#navigation-bottom{
+            clear: both;
+            background-color: $black;
+            text-decoration: none;
+            margin-bottom: 1px;
+            padding: 30px 0;
+            font-size: 1.2em;
+            a{
+                color: $grey-light;
+                padding: 0 15px;
+            }
+            a:hover{
+                color: white;
+            }
+            nav{
+                text-align: center;
+            }
+        }
+
+
+        #social-bottom{
+            margin: 0;
+            margin-bottom: 1px;
+            padding-top: 65px;
+            padding-bottom: 20px;
+            width: 100%;
+            color: $grey-light;
+            background-color: $black;
+            text-align: center;
+            #social-bigs{
+                text-align: center;
+                @include outer-container;
+                .social-big{
+                    text-decoration: none;
+                    display: inline-block;
+                    padding-bottom: 50px;
+                    text-align: center;
+                    margin-right: 2%;
+                    margin-left: 2%;
+                    img{
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+                    a{
+                        font-size: 1.2em;
+                        color: $grey-light;
+                    }
+                }
+            }
+            #social-bottom-title {
+                clear: both;
+                font-size: 2.3em;
+                font-weight: 300;
+                color: white;
+            }
+            #social-bottom-subtitle{
+                padding-bottom: 10px;
+                font-size: 1.5em;
+                font-weight: 300;
+                color: white;
+                margin-bottom: 30px;
+                letter-spacing: 1px;
+            }
+            #contact{
+                @include outer-container;
+                color: white;
+                font-size: 2em;
+                font-weight: 600;
+                text-align: center;
+                li{
+                    display: inline;
+                    width: 33%;
+                    div{
+                        display: inline-block;
+                        text-align: center;
+                        @include media($tablet){
+                            width: 49%;
+                            margin: 0 0 40px 0;
+                            padding: 0;
+                        }
+                    }   
+                }
+                a{
+                    color: $placester-red;
+                }
+                #contact-address{
+                    font-size: .7em;
+                    font-weight: 300;
+                    margin-left: 30px;
+                }
+            }
+        }
+                
+
+        #copyright{
+            color: $grey-light;
+            background-color: $black;
+            text-align: center;
+            padding: 10px 0 10px 0;
+        }

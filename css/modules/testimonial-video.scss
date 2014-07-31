@@ -1,0 +1,104 @@
+@import "variables";
+
+#testimonial-video{
+            padding-top: 60px;
+            @include outer-container;
+            @include media($tablet){
+                margin: $tablet-margin;
+            }
+            .video-title{
+                font: 2.5em $oswald;
+                padding-bottom: 40px;
+                color: $grey-light;
+                font-weight: 300;
+            }
+            #video{
+                @include span-columns(6);
+                color: $grey-title;
+                @include media($tablet){
+                    @include span-columns(8);
+                }
+                #video-text{
+                    padding: 30px 0px 30px 0px;
+                    color: $grey-title;
+                    font: 1.2em $font-stack;
+                    font-weight: 300;
+                    p{
+                        line-height: 180%;
+                    }
+                }
+                iframe{
+                    width: 100%;
+                }
+            }
+            #testimonials{
+                @include span-columns(6);
+                @include omega();
+                @include media($tablet){
+                    @include span-columns(8);
+                }
+                position: relative;
+                #testimonial-slideshow{
+                    color: $grey-title;
+                    width: 100%;
+                    .testimonial{
+                        height: 250px;
+                        .testimonial-quote{
+                            float: left;
+                            height: 100%;
+                            width: 75px;
+                            text-align: center;
+                            font: 6.2em $font-stack;
+                        }
+                        .testimonial-text{
+                            font: 1.5em $font-stack;
+                            font-style: italic;
+                        }
+                        .testimonial-link{
+                            font: 1.3em $font-stack;
+                            font-style: italic;
+                            color: $placester-red;
+                        }
+                    }    
+                }
+                div.slider-nav span.left{
+                    position: absolute;
+                    content: url("../images/leftnav.png");
+                    background: none;
+                    height: 61px;
+                    width: 61px;
+                    margin: 0;
+                    margin-top: 205px;
+                    left: 35%;
+                    @include media($tablet){
+                        margin-top: 50px;
+                    }
+                    border-radius: 50%;
+                }
+                div.slider-nav span.right{
+                    position: absolute;
+                    content: url("../images/rightnav.png");
+                    background: none;
+                    height: 61px;
+                    width: 61px;
+                    margin: 0;
+                    margin-top: 205px;
+                    right: 35%;
+                    @include media($tablet){
+                        margin-top: 50px;
+                    }
+                    border-radius: 50%;
+                }
+                div.timer { 
+                    display:none;
+                }
+            }
+
+            hr {
+                clear: both;
+                border: none;
+                color: $grey-background;
+                background-color: $grey-background;
+                height: 1px;
+            }
+        }
