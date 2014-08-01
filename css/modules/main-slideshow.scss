@@ -44,6 +44,7 @@
                     @include media($tablet){
                         margin: 0 60px;
                     }
+
                     .slideshow-link{
                         position: relative;
                         @include span-columns(4);
@@ -55,10 +56,6 @@
                             color: white;
                             font: 2.5em $oswald;
                             align: middle;
-                        }
-                        @include media($tablet){
-                            @include span-columns(8);
-                            margin: 0;
                         }
                         .clicked{
                             color: $placester-red;
@@ -89,7 +86,8 @@
                             background-size: auto;
                         }
                         @include media($tablet){
-                            margin-bottom: 10px;
+                            @include span-columns(8);
+                            margin: 0 0 10px 0;
                             padding-left: 10px;
                             background-color: rgba(0, 0, 0, .6);
                         }
@@ -104,24 +102,26 @@
                         position: relative;
                         font: 1em $oswald;
                         padding: 15px 20px 0px 20px;
-                        @include media($tablet){
-                            position: absolute;
-                        }
+                    }
+                    .active{
+                        margin-bottom: $mobile-overlay-height + 10px;
                     }
                     #slideshow-overlay1{
                         @include span-columns(7);
                         height: 100px;
-                        margin-top: -100px;
+                        margin-top: -170px;
                         font-size: 3em;
                         @include media($tablet){
-                            margin-top: 0;
+                            @include span-columns(8);
+                            height: $mobile-overlay-height;
+                            margin: 16px 0 0 -10px; //adjust for slideshow-link padding
                             position: absolute;
                         }
                     }
                     #slideshow-overlay2{
                         @include span-columns(12);
                         height: 225px;
-                        margin-top: -225px;
+                        margin-top: -295px;
                         font-size: 3em;
                         p{
                             font: .5em $font-stack;
@@ -134,7 +134,9 @@
                             color: $placester-red;
                         }
                         @include media($tablet){
-                            margin-top: 0;
+                            @include span-columns(8);
+                            height: $mobile-overlay-height;
+                            margin: 16px 0 0 -10px; //adjust for slideshow-link padding
                             position: absolute;
                         }
                     }
@@ -142,7 +144,7 @@
                         @include span-columns(7);
                         @include shift(5);
                         height: 350px;
-                        margin-top: -350px;
+                        margin-top: -420px;
                         font-size: 3em;
 
                         input {
@@ -180,7 +182,9 @@
                             font-size: .6em;
                         }
                         @include media($tablet){
-                            margin-top: 0;
+                            @include span-columns(8);
+                            height: $mobile-overlay-height;
+                            margin: 16px 0 0 -10px; //adjust for slideshow-link padding
                             position: absolute;
                         }
                     }

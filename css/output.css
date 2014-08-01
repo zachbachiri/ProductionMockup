@@ -226,15 +226,6 @@
           color: white;
           font: 2.5em Oswald, serif;
           align: middle; }
-        @media screen and (max-width: 768px) {
-          #main-slideshow #slideshow-background #slideshow-links .slideshow-link {
-            float: left;
-            display: block;
-            margin-right: 3.57866%;
-            width: 100%;
-            margin: 0; }
-            #main-slideshow #slideshow-background #slideshow-links .slideshow-link:last-child {
-              margin-right: 0; } }
         #main-slideshow #slideshow-background #slideshow-links .slideshow-link .clicked {
           color: #e75640; }
         #main-slideshow #slideshow-background #slideshow-links .slideshow-link div:hover {
@@ -261,9 +252,15 @@
           background-size: auto; }
         @media screen and (max-width: 768px) {
           #main-slideshow #slideshow-background #slideshow-links .slideshow-link {
-            margin-bottom: 10px;
+            float: left;
+            display: block;
+            margin-right: 3.57866%;
+            width: 100%;
+            margin: 0 0 10px 0;
             padding-left: 10px;
-            background-color: rgba(0, 0, 0, 0.6); } }
+            background-color: rgba(0, 0, 0, 0.6); }
+            #main-slideshow #slideshow-background #slideshow-links .slideshow-link:last-child {
+              margin-right: 0; } }
       #main-slideshow #slideshow-background #slideshow-links .slideshow-link:hover a {
         color: #e75640; }
       #main-slideshow #slideshow-background #slideshow-links .slideshow-overlay {
@@ -273,30 +270,36 @@
         position: relative;
         font: 1em Oswald, serif;
         padding: 15px 20px 0px 20px; }
-        @media screen and (max-width: 768px) {
-          #main-slideshow #slideshow-background #slideshow-links .slideshow-overlay {
-            position: absolute; } }
+      #main-slideshow #slideshow-background #slideshow-links .active {
+        margin-bottom: 135px; }
       #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay1 {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 57.35098%;
         height: 100px;
-        margin-top: -100px;
+        margin-top: -170px;
         font-size: 3em; }
         #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay1:last-child {
           margin-right: 0; }
         @media screen and (max-width: 768px) {
           #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay1 {
-            margin-top: 0;
-            position: absolute; } }
+            float: left;
+            display: block;
+            margin-right: 3.57866%;
+            width: 100%;
+            height: 125px;
+            margin: 16px 0 0 -10px;
+            position: absolute; }
+            #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay1:last-child {
+              margin-right: 0; } }
       #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay2 {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%;
         height: 225px;
-        margin-top: -225px;
+        margin-top: -295px;
         font-size: 3em; }
         #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay2:last-child {
           margin-right: 0; }
@@ -310,8 +313,15 @@
           color: #e75640; }
         @media screen and (max-width: 768px) {
           #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay2 {
-            margin-top: 0;
-            position: absolute; } }
+            float: left;
+            display: block;
+            margin-right: 3.57866%;
+            width: 100%;
+            height: 125px;
+            margin: 16px 0 0 -10px;
+            position: absolute; }
+            #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay2:last-child {
+              margin-right: 0; } }
       #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay3 {
         float: left;
         display: block;
@@ -319,7 +329,7 @@
         width: 57.35098%;
         margin-left: 42.64902%;
         height: 350px;
-        margin-top: -350px;
+        margin-top: -420px;
         font-size: 3em; }
         #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay3:last-child {
           margin-right: 0; }
@@ -369,8 +379,15 @@
           font-size: .6em; }
         @media screen and (max-width: 768px) {
           #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay3 {
-            margin-top: 0;
-            position: absolute; } }
+            float: left;
+            display: block;
+            margin-right: 3.57866%;
+            width: 100%;
+            height: 125px;
+            margin: 16px 0 0 -10px;
+            position: absolute; }
+            #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay3:last-child {
+              margin-right: 0; } }
   #main-slideshow .orbit-caption {
     font: 1.8em Oswald, serif;
     text-align: left;
