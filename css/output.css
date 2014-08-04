@@ -30,10 +30,9 @@
         display: block;
         width: 100%; }
       #main-navigation ul li .side-menu-section {
-        background: -webkit-linear-gradient(#ededed, #c8c8c8);
-        background: -o-linear-gradient(#ededed, #c8c8c8);
-        background: -moz-linear-gradient(#ededed, #c8c8c8);
-        background: linear-gradient(#ededed, #c8c8c8);
+        background-color: #ededed;
+        background-image: -webkit-linear-gradient(#ededed, #c8c8c8);
+        background-image: linear-gradient(#ededed, #c8c8c8);
         color: #4b4b4b;
         height: 30px;
         padding-left: 15px;
@@ -52,7 +51,7 @@
 
 #page-wrap {
   float: right;
-  box-shadow: -2px 0px 3px 2px #c8c8c8;
+  box-shadow: -2px 0 3px 2px #c8c8c8;
   overflow: auto;
   width: 100%; }
   #page-wrap #top-line {
@@ -135,7 +134,7 @@
       position: absolute;
       display: inline;
       width: 170px;
-      right: 0px;
+      right: 0;
       margin-right: 15px;
       font-weight: 300;
       font-size: 1.5em;
@@ -268,7 +267,7 @@
         color: white;
         position: relative;
         font: 1em Oswald, serif;
-        padding: 15px 20px 0px 20px; }
+        padding: 15px 20px 0 20px; }
       #main-slideshow #slideshow-background #slideshow-links .active {
         margin-bottom: 135px; }
       #main-slideshow #slideshow-background #slideshow-links #slideshow-overlay1 {
@@ -684,8 +683,8 @@
         #properties #posts .post-wrapper .post img {
           width: 100%; }
         #properties #posts .post-wrapper .post .posts-text {
-          margin-left: 25px;
-          margin-top: 15px; }
+          margin-left: 20px;
+          margin-top: 10px; }
           #properties #posts .post-wrapper .post .posts-text .post-title {
             font-size: 1.3em;
             margin-bottom: 3px; }
@@ -732,7 +731,7 @@
         #testimonial-video #video:last-child {
           margin-right: 0; } }
     #testimonial-video #video #video-text {
-      padding: 30px 0px 30px 0px;
+      padding: 30px 0 30px 0;
       color: #4b4b4b;
       font: 1.2em Open Sans, sans-serif;
       font-weight: 300; }
@@ -814,7 +813,7 @@
   max-width: 920px;
   margin-left: auto;
   margin-right: auto;
-  padding: 50px 0px 50px 0px; }
+  padding: 50px 0 50px 0; }
   #social-feeds:after {
     content: "";
     display: table;
@@ -1001,7 +1000,7 @@
   clear: both; }
   #cities-background .cities-title {
     clear: both;
-    margin: 50px 0px 40px 0px;
+    margin: 50px 0 40px 0;
     font-size: 2em; }
   #cities-background hr {
     clear: both;

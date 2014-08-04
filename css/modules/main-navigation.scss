@@ -28,10 +28,7 @@
 
                 }
                 .side-menu-section{
-                    background: -webkit-linear-gradient($grey-background , $grey-search-border); 
-                    background: -o-linear-gradient($grey-background , $grey-search-border); 
-                    background: -moz-linear-gradient($grey-background , $grey-search-border); 
-                    background: linear-gradient($grey-background , $grey-search-border); 
+                    @include linear-gradient($grey-background, $grey-search-border);
                     color: $grey-title;
                     height: 30px;
                     padding-left: 15px;
