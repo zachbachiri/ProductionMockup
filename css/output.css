@@ -219,14 +219,12 @@
         width: 31.76157%;
         padding-top: 15px;
         height: 70px;
-        display: inline;
-        align: middle; }
+        display: inline; }
         #main-slideshow #slideshow-background #slideshow-links .slideshow-link:last-child {
           margin-right: 0; }
         #main-slideshow #slideshow-background #slideshow-links .slideshow-link .unclicked {
           color: white;
-          font: 2.5em Oswald, serif;
-          align: middle; }
+          font: 2.5em Oswald, serif; }
         #main-slideshow #slideshow-background #slideshow-links .slideshow-link .clicked {
           color: #e75640; }
         #main-slideshow #slideshow-background #slideshow-links .slideshow-link div:hover {
@@ -489,7 +487,8 @@
         height: 50%;
         margin-top: 5px; }
     #search-background #search .chosen-drop {
-      padding-top: 5px; }
+      padding-top: 5px;
+      width: 95%; }
     #search-background #search #forms {
       text-align: left;
       padding-bottom: 27px; }
@@ -590,7 +589,7 @@
         color: #4b4b4b; }
       #featured-neighborhoods .neighborhood .neighborhood-title a:hover {
         color: #e75640;
-        text-decoration-color: none; }
+        text-decoration: none; }
       @media screen and (max-width: 768px) {
         #featured-neighborhoods .neighborhood .neighborhood-title {
           font-size: 1.8em; } }
@@ -892,7 +891,8 @@
       font-weight: 600;
       font-size: 1.3em; }
     #social-feeds #get-in-touch #intouch-comments {
-      height: 115px; }
+      padding-top: 20px;
+      padding-bottom: 100px; }
     #social-feeds #get-in-touch #intouch-button {
       float: right;
       color: white;
@@ -910,7 +910,8 @@
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%; }
+    width: 31.76157%;
+    overflow: hidden; }
     #social-feeds #facebook:last-child {
       margin-right: 0; }
     #social-feeds #facebook hr {
@@ -1021,7 +1022,8 @@
       clear: both; }
     @media screen and (max-width: 768px) {
       #cities-background .cities {
-        margin: 0 30px; }
+        margin: 0 30px;
+        margin-bottom: 50px; }
         #cities-background .cities li {
           font-size: 1.2em; } }
     #cities-background .cities ul {
@@ -1059,7 +1061,7 @@
         color: #4b4b4b; }
       #cities-background .cities li a:hover {
         color: #e75640;
-        text-decoration-color: none; }
+        text-decoration: none; }
     @media screen and (max-width: 768px) {
       #cities-background .cities li:nth-last-child(-n+4) {
         display: none; } }

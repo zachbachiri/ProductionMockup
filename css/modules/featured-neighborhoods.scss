@@ -46,7 +46,7 @@
                     }
                     a:hover{
                         color: $placester-red;
-                        text-decoration-color: none;
+                        text-decoration: none;
                     }
                     @include media($tablet){
                         font-size: 1.8em;

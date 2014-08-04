@@ -51,11 +51,9 @@
                         padding-top: 15px;
                         height: 70px;
                         display: inline; 
-                        align: middle;
                         .unclicked{
                             color: white;
                             font: 2.5em $oswald;
-                            align: middle;
                         }
                         .clicked{
                             color: $placester-red;
