@@ -43,7 +43,7 @@ $(document).ready(function(){
 				$('.slideshow-link').removeClass('active');
 			}
 				$("#slideshow-overlay2").slideToggle(0);
-				$("#slideshow-overlay1").hide(0);
+				$("#slideshow-overlay1").hide(0); 
 				$("#slideshow-overlay3").hide(0);
 
 				$(this).toggleClass('clicked');

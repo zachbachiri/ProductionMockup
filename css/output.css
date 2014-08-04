@@ -53,7 +53,8 @@
 #page-wrap {
   float: right;
   box-shadow: -2px 0px 3px 2px #c8c8c8;
-  overflow: auto; }
+  overflow: auto;
+  width: 100%; }
   #page-wrap #top-line {
     width: 100%;
     height: 2px;
@@ -139,21 +140,21 @@
       font-weight: 300;
       font-size: 1.5em;
       color: #e75640; }
-  #headers #navigation li {
+  #headers #navigation-top li {
     letter-spacing: 1px;
     font: 1.1em Open Sans, sans-serif;
     font-weight: 700;
     padding-left: 15px; }
-  #headers #navigation a:hover {
+  #headers #navigation-top a:hover {
     color: #e75640; }
   @media screen and (max-width: 768px) {
-    #headers #navigation {
+    #headers #navigation-top {
       text-align: left;
       margin-left: 170px;
       padding-top: 10px;
       font-size: 1em;
       letter-spacing: normal; }
-      #headers #navigation #contact-nav {
+      #headers #navigation-top #contact-nav {
         display: none; } }
   #headers #mobile-logout {
     display: none; }
@@ -1063,19 +1064,19 @@
       #cities-background .cities li:nth-last-child(-n+4) {
         display: none; } }
 
-#navigation-bottom {
+#nav-bottom {
   clear: both;
   background-color: #171717;
   text-decoration: none;
   margin-bottom: 1px;
   padding: 30px 0;
   font-size: 1.2em; }
-  #navigation-bottom a {
+  #nav-bottom a {
     color: #969696;
     padding: 0 15px; }
-  #navigation-bottom a:hover {
+  #nav-bottom a:hover {
     color: white; }
-  #navigation-bottom nav {
+  #nav-bottom nav {
     text-align: center; }
 
 #social-bottom {
@@ -1096,6 +1097,9 @@
       content: "";
       display: table;
       clear: both; }
+    #social-bottom #social-bigs a {
+      font-size: 1.2em;
+      color: #969696; }
     #social-bottom #social-bigs .social-big {
       text-decoration: none;
       display: inline-block;
@@ -1106,9 +1110,6 @@
       #social-bottom #social-bigs .social-big img {
         display: block;
         margin-bottom: 10px; }
-      #social-bottom #social-bigs .social-big a {
-        font-size: 1.2em;
-        color: #969696; }
   #social-bottom #social-bottom-title {
     clear: both;
     font-size: 2.3em;

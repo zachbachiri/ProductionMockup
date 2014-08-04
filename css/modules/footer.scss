@@ -1,6 +1,6 @@
 @import "variables";
 
-#navigation-bottom{
+#nav-bottom{
             clear: both;
             background-color: $black;
             text-decoration: none;
@@ -32,6 +32,10 @@
             #social-bigs{
                 text-align: center;
                 @include outer-container;
+                a{
+                    font-size: 1.2em;
+                    color: $grey-light;
+                }
                 .social-big{
                     text-decoration: none;
                     display: inline-block;
@@ -42,10 +46,6 @@
                     img{
                         display: block;
                         margin-bottom: 10px;
-                    }
-                    a{
-                        font-size: 1.2em;
-                        color: $grey-light;
                     }
                 }
             }
