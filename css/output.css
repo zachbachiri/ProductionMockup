@@ -685,21 +685,21 @@
         #properties #posts .post-wrapper .post .posts-text {
           margin-left: 20px;
           margin-top: 10px; }
-          #properties #posts .post-wrapper .post .posts-text a {
-            color: #4b4b4b; }
-          #properties #posts .post-wrapper .post .posts-text a:hover {
-            color: #e75640; }
-          #properties #posts .post-wrapper .post .posts-text .post-title {
-            font-size: 1.3em;
-            margin-bottom: 3px; }
-          #properties #posts .post-wrapper .post .posts-text .post-subtitle {
-            font: 1.1em Open Sans, sans-serif;
-            color: #969696;
-            padding-bottom: 10px; }
-          #properties #posts .post-wrapper .post .posts-text .post-text {
-            font: 0.7em Open Sans, sans-serif;
-            font-weight: 300;
-            color: #969696; }
+        #properties #posts .post-wrapper .post a {
+          color: #4b4b4b; }
+        #properties #posts .post-wrapper .post a:hover {
+          color: #e75640; }
+        #properties #posts .post-wrapper .post .post-title {
+          font-size: 1.3em;
+          margin-bottom: 3px; }
+        #properties #posts .post-wrapper .post .post-subtitle {
+          font: 1.1em Open Sans, sans-serif;
+          color: #969696;
+          padding-bottom: 10px; }
+        #properties #posts .post-wrapper .post .post-text {
+          font: 0.7em Open Sans, sans-serif;
+          font-weight: 300;
+          color: #969696; }
 
 #testimonial-video {
   padding-top: 60px;
@@ -1163,6 +1163,9 @@
   text-align: center;
   padding: 10px 0 10px 0; }
 
+/*
+    Need to reevaluate the amount of nesting in this project, for performance reasons
+*/
 body {
   width: 100%;
   font: 8pt Open Sans, sans-serif;

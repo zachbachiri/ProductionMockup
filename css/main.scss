@@ -20,6 +20,11 @@
 @import "modules/footer";
 
 
+/*
+    Need to reevaluate the amount of nesting in this project, for performance reasons
+*/
+
+
 body{
     width: 100%;
     font: 8pt $font-stack;
