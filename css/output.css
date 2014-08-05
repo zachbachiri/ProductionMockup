@@ -685,6 +685,10 @@
         #properties #posts .post-wrapper .post .posts-text {
           margin-left: 20px;
           margin-top: 10px; }
+          #properties #posts .post-wrapper .post .posts-text a {
+            color: #4b4b4b; }
+          #properties #posts .post-wrapper .post .posts-text a:hover {
+            color: #e75640; }
           #properties #posts .post-wrapper .post .posts-text .post-title {
             font-size: 1.3em;
             margin-bottom: 3px; }
