@@ -13,9 +13,19 @@ module.exports = function(grunt) {
 				files: '**/*.scss',
 				tasks: ['sass']
 			}
+		},
+		casperjs: {
+		    options: {
+		    	async: {
+			        parallel: false
+			    }
+		    },
+		    files: ['js/tests/*.js']
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-casperjs');
+	grunt.registerTask('test', ['casperjs'])
 	grunt.registerTask('default',['watch']);
 }
